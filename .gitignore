@@ -1,1 +1,16 @@
-/target/
+# Compiled class file
+*.classpath
+
+
+# eclipse
+*.project
+
+
+# settings
+*/.settings/
+
+# target
+target/
+
+
+
