@@ -15,14 +15,13 @@ public class Photo {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Photo(int photoId, String photoUrl, String photoName, String photoDescription, int userId, Set<Tag> tags) {
+	public Photo(int photoId, String photoUrl, String photoName, String photoDescription, int userId) {
 		super();
 		this.photoId = photoId;
 		this.photoUrl = photoUrl;
 		this.photoName = photoName;
 		this.photoDescription = photoDescription;
 		this.userId = userId;
-		this.tags = tags;
 	}
 	public int getPhotoId() {
 		return photoId;
