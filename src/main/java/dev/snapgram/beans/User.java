@@ -7,7 +7,8 @@ public class User {
 	private int userId;
 	private String username;
 	private String password;
-	private String name;
+	private String fName;
+	private String lName;
 	private Set<Photo> photos;
 	
 	public User() {
@@ -15,13 +16,13 @@ public class User {
 		// TODO Auto-generated constructor stub
 	}
 
-	public User(int userId, String username, String password, String name, Set<Photo> photos) {
+	public User(int userId, String username, String password, String fName, String lName) {
 		super();
 		this.userId = userId;
 		this.username = username;
 		this.password = password;
-		this.name = name;
-		this.photos = photos;
+		this.fName = fName;
+		this.lName =lName;
 	}
 
 	public int getUserId() {
@@ -48,13 +49,6 @@ public class User {
 		this.password = password;
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
 
 	public Set<Photo> getPhotos() {
 		return photos;
@@ -64,11 +58,29 @@ public class User {
 		this.photos = photos;
 	}
 
-	@Override
-	public String toString() {
-		return "User [userId=" + userId + ", username=" + username + ", password=" + password + ", name=" + name
-				+ ", photos=" + photos + "]";
+	public String getfName() {
+		return fName;
 	}
 
+	public void setfName(String fName) {
+		this.fName = fName;
+	}
+
+	public String getlName() {
+		return lName;
+	}
+
+	public void setlName(String lName) {
+		this.lName = lName;
+	}
+
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", username=" + username + ", password=" + password + ", fName=" + fName
+				+ ", lName=" + lName + ", photos=" + photos + "]";
+	}
+
+	
+	
 
 }
