@@ -9,6 +9,8 @@ public interface TagDAO {
 	
 	Tag createTag(Tag tag);
 	
+	Tag getTagById(int id);
+	
 	Set<Photo> getPhotosByTag(Tag tag);
 
 }

@@ -10,4 +10,8 @@ public interface PhotoDAO {
 	Photo createPhoto(Photo photo);
 	
 	Photo getPhotoById(int id);
+	
+	Photo updatePhoto(Photo photo);
+	
+	boolean deletePhoto(int id);
 }

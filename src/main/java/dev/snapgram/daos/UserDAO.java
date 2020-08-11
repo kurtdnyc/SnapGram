@@ -9,4 +9,6 @@ public interface UserDAO {
 	User getUserById(int id);
 	
 	User getUserByLogin(String username, String password);
+	
+	User updateUser(User user);
 }

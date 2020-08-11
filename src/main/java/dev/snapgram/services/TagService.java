@@ -6,7 +6,10 @@ import dev.snapgram.beans.Photo;
 import dev.snapgram.beans.Tag;
 
 public interface TagService {
-	Tag createTag(Tag tag);
 	
+	Tag createTag(Tag tag);
+	Tag getTagById(int id);
 	Set<Photo> getPhotosByTag(Tag tag);
+	
+	
 }
