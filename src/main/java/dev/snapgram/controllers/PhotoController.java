@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import dev.snapgram.entities.Photo;
+import dev.snapgram.entities.User;
 import dev.snapgram.services.PhotoService;
 import dev.snapgram.services.PhotoServiceImpl;
 import dev.snapgram.services.UserService;
@@ -19,12 +20,16 @@ public class PhotoController {
 
 	@Autowired
 	PhotoService pServ;
+	UserService uServ;
 
 	
 	@RequestMapping(value = "/users/{uid}/photos", method = RequestMethod.POST)
 	@ResponseBody
 	public Photo createPhoto(@RequestBody Photo photo, @PathVariable int uid) {
-		//photo.setUserId(uid);
+		
+		// first get userbyuserid
+		User currUser = uServ.getUserById(uid);
+		photo.setUser(currUser);
 		return this.pServ.createPhoto(photo);
 	}
 	

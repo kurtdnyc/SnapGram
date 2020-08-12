@@ -20,6 +20,7 @@ public class Tag {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="t_id")
 	private int tagId;
 	
 	@Column(name = "tag_name")
