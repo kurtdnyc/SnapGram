@@ -1,5 +1,6 @@
 package dev.snapgram.entities;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -32,7 +33,7 @@ public class User {
 	private String lName;
 	
 	@OneToMany(mappedBy = "user")
-	private Set<Photo> photos;
+	private Set<Photo> photos = new HashSet<Photo>();
 	
 	public User() {
 		super();
@@ -98,11 +99,13 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [userId=" + userId + ", username=" + username + ", password=" + password + ", fName=" + fName
-				+ ", lName=" + lName + ", photos=" + photos + "]";
+		return "User [userId=" + userId + ", " + (username != null ? "username=" + username + ", " : "")
+				+ (password != null ? "password=" + password + ", " : "")
+				+ (fName != null ? "fName=" + fName + ", " : "") + (lName != null ? "lName=" + lName + ", " : "")
+				+ (photos != null ? "photos=" + photos : "") + "]";
 	}
 
-	
+
 	
 
 }

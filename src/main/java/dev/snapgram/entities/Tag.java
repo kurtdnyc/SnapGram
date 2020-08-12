@@ -58,9 +58,11 @@ public class Tag {
 	public void setPhotos(Set<Photo> photos) {
 		this.photos = photos;
 	}
+
 	@Override
 	public String toString() {
-		return "Tag [tagId=" + tagId + ", tagName=" + tagName + ", photos=" + photos + "]";
+		return "Tag [tagId=" + tagId + ", " + (tagName != null ? "tagName=" + tagName + ", " : "")
+				+ (photos != null ? "photos=" + photos : "") + "]";
 	}
 	
 	

@@ -2,11 +2,13 @@ package dev.snapgram.controllers;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import dev.snapgram.entities.Photo;
 import dev.snapgram.entities.User;
@@ -15,11 +17,13 @@ import dev.snapgram.services.PhotoServiceImpl;
 import dev.snapgram.services.UserService;
 import dev.snapgram.services.UserServiceImpl;
 
-
+@Component
+@RestController
 public class PhotoController {
 
 	@Autowired
 	PhotoService pServ;
+	@Autowired
 	UserService uServ;
 
 	
@@ -28,8 +32,12 @@ public class PhotoController {
 	public Photo createPhoto(@RequestBody Photo photo, @PathVariable int uid) {
 		
 		// first get userbyuserid
+		System.out.println(uid);
+		System.out.println(photo);
 		User currUser = uServ.getUserById(uid);
+		System.out.println(currUser);
 		photo.setUser(currUser);
+		
 		return this.pServ.createPhoto(photo);
 	}
 	

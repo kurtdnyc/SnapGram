@@ -1,5 +1,6 @@
 package dev.snapgram.entities;
 
+import java.util.HashSet;
 import java.util.Set;
 
 
@@ -16,6 +17,7 @@ public class Photo {
 	@Column(name = "p_id")
 	private int photoId;
 	
+	
 	@Column(name = "photo_url")
 	private String photoUrl;
 	
@@ -29,11 +31,11 @@ public class Photo {
 	@ManyToOne
 	@JsonBackReference
 	@JoinColumn(name = "u_id")
-	User user;
+	private User user;
 	
 	@ManyToMany(fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST,CascadeType.MERGE})
 	@JoinTable(name = "photo_tags",joinColumns = { @JoinColumn(name = "t_id") }, inverseJoinColumns = { @JoinColumn(name = "p_id") })
-	private Set<Tag> tags;
+	private Set<Tag> tags = new HashSet<Tag>();
 	
 	public Photo(int photoId, String photoUrl, String photoName, String photoDescription, User user, Set<Tag> tags) {
 		super();
@@ -97,12 +99,7 @@ public class Photo {
 		this.tags = tags;
 	}
 
-	@Override
-	public String toString() {
-		return "Photo [photoId=" + photoId + ", photoUrl=" + photoUrl + ", photoName=" + photoName
-				+ ", photoDescription=" + photoDescription + ", user=" + user + ", tags=" + tags + "]";
-	}
-	
+
 
 	
 
