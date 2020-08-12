@@ -2,8 +2,10 @@ package dev.snapgram.entities;
 
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -23,7 +25,7 @@ public class Tag {
 	@Column(name = "tag_name")
 	private String tagName;
 	
-	@ManyToMany(mappedBy = "tag")
+	@ManyToMany(mappedBy = "tags", fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST,CascadeType.MERGE})
 	private Set<Photo> photos;
 	
 	public Tag() {

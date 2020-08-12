@@ -29,69 +29,83 @@ public class Photo {
 	@ManyToOne
 	@JsonBackReference
 	@JoinColumn(name = "u_id")
-	private int userId;
+	User user;
 	
-	@ManyToMany
-	@JoinTable(name = "photo_tags",
-    joinColumns = { @JoinColumn(name = "t_id") },
-    inverseJoinColumns = { @JoinColumn(name = "p_id") })
+	@ManyToMany(fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST,CascadeType.MERGE})
+	@JoinTable(name = "photo_tags",joinColumns = { @JoinColumn(name = "t_id") }, inverseJoinColumns = { @JoinColumn(name = "p_id") })
 	private Set<Tag> tags;
 	
+	public Photo(int photoId, String photoUrl, String photoName, String photoDescription, User user, Set<Tag> tags) {
+		super();
+		this.photoId = photoId;
+		this.photoUrl = photoUrl;
+		this.photoName = photoName;
+		this.photoDescription = photoDescription;
+		this.user = user;
+		this.tags = tags;
+	}
+
 	public Photo() {
 		super();
 	}
-	
-	public Photo(int photoId, String photoUrl, String photoName, String photoDescription, int userId) {
-		super();
-		this.photoId = photoId;
-		this.photoUrl = photoUrl;
-		this.photoName = photoName;
-		this.photoDescription = photoDescription;
-		this.userId = userId;
-	}
-	
+
 	public int getPhotoId() {
 		return photoId;
 	}
+
 	public void setPhotoId(int photoId) {
 		this.photoId = photoId;
 	}
+
 	public String getPhotoUrl() {
 		return photoUrl;
 	}
+
 	public void setPhotoUrl(String photoUrl) {
 		this.photoUrl = photoUrl;
 	}
+
 	public String getPhotoName() {
 		return photoName;
 	}
+
 	public void setPhotoName(String photoName) {
 		this.photoName = photoName;
 	}
+
 	public String getPhotoDescription() {
 		return photoDescription;
 	}
+
 	public void setPhotoDescription(String photoDescription) {
 		this.photoDescription = photoDescription;
 	}
-	public int getUserId() {
-		return userId;
+
+	public User getUser() {
+		return user;
 	}
-	public void setUserId(int userId) {
-		this.userId = userId;
+
+	public void setUser(User user) {
+		this.user = user;
 	}
+
 	public Set<Tag> getTags() {
 		return tags;
 	}
+
 	public void setTags(Set<Tag> tags) {
 		this.tags = tags;
 	}
+
 	@Override
 	public String toString() {
 		return "Photo [photoId=" + photoId + ", photoUrl=" + photoUrl + ", photoName=" + photoName
-				+ ", photoDescription=" + photoDescription + ", userId=" + userId + ", tags=" + tags + "]";
+				+ ", photoDescription=" + photoDescription + ", user=" + user + ", tags=" + tags + "]";
 	}
 	
+
+	
+
 	
 
 }
