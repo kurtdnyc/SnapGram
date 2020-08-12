@@ -23,6 +23,7 @@ public class LoginController {
 		try {
 			User user = this.uServ.getUserByLogin(dto.getUsername(), dto.getPassword());
 			// create session attribute
+			// redirect to home page
 			return null;
 		} catch (InvalidLoginException e) {
 			e.toString();
@@ -35,7 +36,7 @@ public class LoginController {
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	@ResponseBody
 	public User getCurrentSession() {
-		// return session attribute
+		// get user from session attribute
 		return null;
 		
 	}

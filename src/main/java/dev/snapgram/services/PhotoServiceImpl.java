@@ -16,6 +16,11 @@ public class PhotoServiceImpl implements PhotoService{
 
 	@Autowired
 	PhotoRepository pr;
+	
+	public PhotoServiceImpl(PhotoRepository pr) {
+		super();
+		this.pr=pr;
+	}
 
 	@Override
 	public Photo createPhoto(Photo photo) {

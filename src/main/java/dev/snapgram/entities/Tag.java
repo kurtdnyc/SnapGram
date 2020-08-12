@@ -2,26 +2,40 @@ package dev.snapgram.entities;
 
 import java.util.Set;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name ="photo")
+@Table(name ="tag")
 public class Tag {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int tagId;
+	
+	@Column(name = "tag_name")
 	private String tagName;
+	
+	@ManyToMany(mappedBy = "tag")
 	private Set<Photo> photos;
 	
 	public Tag() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
+	
 	public Tag(int tagId, String tagName) {
 		super();
 		this.tagId = tagId;
 		this.tagName = tagName;
 	}
+	
 	public int getTagId() {
 		return tagId;
 	}

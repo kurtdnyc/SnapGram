@@ -2,23 +2,40 @@ package dev.snapgram.entities;
 
 import java.util.Set;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name ="photo")
+@Table(name ="user")
 public class User {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "u_id")
 	private int userId;
+	
+	@Column(name = "username", unique=true)
 	private String username;
+	
+	@Column(name = "password")
 	private String password;
+	
+	@Column(name = "first_name")
 	private String fName;
+	
+	@Column(name = "last_name")
 	private String lName;
+	
+	@OneToMany(mappedBy = "user")
 	private Set<Photo> photos;
 	
 	public User() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public User(int userId, String username, String password, String fName, String lName) {

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -31,25 +32,18 @@ public class UserController {
 		return this.uServ.createUser(user);
 	}
 	
+	@RequestMapping(value = "/users/{uid}", method = RequestMethod.GET)
+	@ResponseBody
+	public User getUserById(@PathVariable int uid) {
+		return this.uServ.getUserById(uid);
+	}
+	
 	@RequestMapping(value = "/users", method = RequestMethod.GET)
 	@ResponseBody
-	public User getUserById(@PathVariable int id) {
-		return this.uServ.getUserById(id);
+	public User getUserByUsername(@RequestParam String username) {
+		return this.uServ.getUserByUsername(username);
 	}
 	
-	@RequestMapping(value = "/users/{username}", method = RequestMethod.GET)
-	@ResponseBody
-	public User getUserByUsername(String username) {
-		// for searching
-		// return the users page not a user object
-		return null;
-	}
-	
-	@RequestMapping(value = "/users/{uid}/photos", method = RequestMethod.GET)
-	@ResponseBody
-	public Set<Photo> getUsersPhotos(@PathVariable int uid) {
-		return this.uServ.getUserById(uid).getPhotos();
-	}
 }
 
 

@@ -39,7 +39,7 @@ public class PhotoController {
 	@RequestMapping(value = "/users/{uid}/photos", method = RequestMethod.PUT)
 	@ResponseBody
 	public Photo editPhoto(@RequestBody Photo photo, @PathVariable int uid) {
-		photo.setUserId(uid); // probably redundant if done first on the front end 
+		photo.setUserId(uid); 
 		return this.pServ.updatePhoto(photo);
 	}
 	

@@ -27,7 +27,7 @@ class TagServiceTests {
 		
 		TagRepository tDao = Mockito.mock(TagRepository.class);
 		
-		Mockito.when(tDao.createTag(tag)).thenReturn(tag);
+		Mockito.when(tDao.save(tag)).thenReturn(tag);
 
 		TagService tServ = new TagServiceImpl(tDao);
 		
@@ -42,7 +42,7 @@ class TagServiceTests {
 		
 		TagRepository tDao = Mockito.mock(TagRepository.class);
 		
-		Mockito.when(tDao.getTagById(1)).thenReturn(tag);
+		Mockito.when(tDao.findById(1).get()).thenReturn(tag);
 
 		TagService tServ = new TagServiceImpl(tDao);
 		
@@ -51,32 +51,6 @@ class TagServiceTests {
 		
 	}
 	
-	@Test
-	@Order(3)
-	void getPhotosByTag() {
-		Tag tag = new Tag(1,"nature");
-		
-		Set<Photo> fakePhotos = new HashSet<Photo>();
-		
-		Photo flick = new Photo(3,null,"selfie","mad cute",1);
-		
-		Photo flick2 = new Photo(8,null,"group pic","we out here",2);
-		Photo flick3 = new Photo(12,null,"lolol","ahfjhjfhjdsf",9);
-		
-	
-		fakePhotos.add(flick);
-		fakePhotos.add(flick2);
-		fakePhotos.add(flick3);
-		
-		TagRepository tDao = Mockito.mock(TagRepository.class);
-		
-		Mockito.when(tDao.getPhotosByTag(tag)).thenReturn(fakePhotos);
 
-		TagService tServ = new TagServiceImpl(tDao);
-		
-		Assertions.assertEquals(3, tServ.getPhotosByTag(tag).size());
-		
-		
-	}
 
 }

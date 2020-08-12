@@ -27,7 +27,7 @@ class PhotoServiceTests {
 		PhotoRepository pDao = Mockito.mock(PhotoRepository.class);
 		
 		
-		Mockito.when(pDao.createPhoto(flick)).thenReturn(flick);
+		Mockito.when(pDao.save(flick)).thenReturn(flick);
 
 		PhotoService pServ = new PhotoServiceImpl(pDao);
 		
@@ -46,7 +46,7 @@ class PhotoServiceTests {
 		PhotoRepository pDao = Mockito.mock(PhotoRepository.class);
 		
 		
-		Mockito.when(pDao.getPhotoById(3)).thenReturn(flick);
+		Mockito.when(pDao.findById(3).get()).thenReturn(flick);
 
 		PhotoService pServ = new PhotoServiceImpl(pDao);
 		
@@ -64,7 +64,7 @@ class PhotoServiceTests {
 		PhotoRepository pDao = Mockito.mock(PhotoRepository.class);
 		
 		
-		Mockito.when(pDao.updatePhoto(flick)).thenReturn(updatedFlick);
+		Mockito.when(pDao.save(flick)).thenReturn(updatedFlick);
 
 		PhotoService pServ = new PhotoServiceImpl(pDao);
 		
@@ -72,22 +72,6 @@ class PhotoServiceTests {
 		Assertions.assertNotEquals("selfie", photo.getPhotoName());
 	}
 	
-	@Test
-	@Order(4)
-	void deletePhoto() {
-		Photo flick = new Photo(3,null,"selfie","mad cute",1);
-		
-		
-		
-		PhotoRepository pDao = Mockito.mock(PhotoRepository.class);
-		
-		
-		Mockito.when(pDao.deletePhoto(3)).thenReturn(true);
-
-		PhotoService pServ = new PhotoServiceImpl(pDao);
-		
-		boolean result = pServ.deletePhoto(flick.getPhotoId());
-		Assertions.assertEquals(result, true);
-	}
+	
 
 }

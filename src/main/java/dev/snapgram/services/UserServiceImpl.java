@@ -1,17 +1,19 @@
 package dev.snapgram.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import dev.snapgram.entities.User;
 import dev.snapgram.exceptions.InvalidLoginException;
 import dev.snapgram.repositories.UserRepository;
-import dev.snapgram.repositories.UserDAOSpring;
+
 
 @Component
 @Service
 public class UserServiceImpl implements UserService {
 
+	@Autowired
 	UserRepository ur;
 	
 	
@@ -32,14 +34,12 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public User getUserByLogin(String username, String password) throws InvalidLoginException {
-		// how
-		return null;
+		return this.ur.findByUsernameAndPassword(username, password);
 	}
 
 	@Override
 	public User getUserByUsername(String username) {
-		// how
-		return null;
+		return this.ur.findByUsername(username);
 	}
 
 }
