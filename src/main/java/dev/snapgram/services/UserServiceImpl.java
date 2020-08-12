@@ -1,9 +1,15 @@
 package dev.snapgram.services;
 
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
 import dev.snapgram.beans.User;
 import dev.snapgram.daos.UserDAO;
 import dev.snapgram.daos.UserDAOSpring;
+import dev.snapgram.exceptions.InvalidLoginException;
 
+@Component
+@Service
 public class UserServiceImpl implements UserService {
 
 	private UserDAO udao;
@@ -30,7 +36,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public User getUserByLogin(String username, String password) {
+	public User getUserByLogin(String username, String password) throws InvalidLoginException {
 		return this.udao.getUserByLogin(username, password);
 	}
 

@@ -2,11 +2,16 @@ package dev.snapgram.services;
 
 import java.util.Set;
 
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
 import dev.snapgram.beans.Photo;
 import dev.snapgram.beans.Tag;
 import dev.snapgram.daos.TagDAO;
 import dev.snapgram.daos.TagDAOSpring;
 
+@Component
+@Service
 public class TagServiceImpl implements TagService{
 
 	private TagDAO tDao;

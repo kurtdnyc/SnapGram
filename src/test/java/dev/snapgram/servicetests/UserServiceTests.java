@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Order;
 
 import dev.snapgram.beans.User;
 import dev.snapgram.daos.UserDAO;
+import dev.snapgram.exceptions.InvalidLoginException;
 import dev.snapgram.services.UserService;
 import dev.snapgram.services.UserServiceImpl;
 
@@ -53,7 +54,7 @@ class UserServiceTests {
 	
 	@Test
 	@Order(4)
-	void getUserByLogin() {
+	void getUserByLogin() throws InvalidLoginException {
 		User bob = new User(1,"bobbyboy69@email.com","securepassword","bob","boberson");
 		
 		UserDAO uDao = Mockito.mock(UserDAO.class);

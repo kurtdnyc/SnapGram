@@ -2,6 +2,7 @@ package dev.snapgram.controllers;
 
 import java.util.Set;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,20 +19,21 @@ import dev.snapgram.services.UserServiceImpl;
 @Controller
 public class UserController {
 
-	UserService uServ = new UserServiceImpl(null);
+	@Autowired
+	UserService uServ;
 	
 	
 	@RequestMapping(value = "/users", method = RequestMethod.POST)
 	@ResponseBody
 	public User createUser(User user) {
-		uServ.createUser(user);
-		return user;
+		
+		return this.uServ.createUser(user);
 	}
 	
 	@RequestMapping(value = "/users", method = RequestMethod.GET)
 	@ResponseBody
 	public User getUserById(@PathVariable int id) {
-		return null;
+		return this.uServ.getUserById(id);
 	}
 	
 	@RequestMapping(value = "/users/{username}", method = RequestMethod.GET)
@@ -45,8 +47,7 @@ public class UserController {
 	@RequestMapping(value = "/users/{uid}/photos", method = RequestMethod.GET)
 	@ResponseBody
 	public Set<Photo> getUsersPhotos(@PathVariable int uid) {
-		User user = uServ.getUserById(uid);
-		return user.getPhotos();
+		return this.uServ.getUserById(uid).getPhotos();
 	}
 }
 

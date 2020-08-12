@@ -1,6 +1,7 @@
 package dev.snapgram.controllers;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,20 +17,21 @@ import dev.snapgram.services.UserServiceImpl;
 
 public class PhotoController {
 
-	PhotoService pServ = new PhotoServiceImpl(null);
+	@Autowired
+	PhotoService pServ;
 
 	
 	@RequestMapping(value = "/users/{uid}/photos", method = RequestMethod.POST)
 	@ResponseBody
 	public Photo createPhoto(@RequestBody Photo photo, @PathVariable int uid) {
 		photo.setUserId(uid);
-		return pServ.createPhoto(photo);
+		return this.pServ.createPhoto(photo);
 	}
 	
 	@RequestMapping(value = "/users/{uid}/photos/{pid}", method = RequestMethod.GET)
 	@ResponseBody
 	public Photo getPhotoById(@PathVariable int pid) {
-		return pServ.getPhotoById(pid);
+		return this.pServ.getPhotoById(pid);
 	}
 	
 	
@@ -38,7 +40,7 @@ public class PhotoController {
 	@ResponseBody
 	public Photo editPhoto(@RequestBody Photo photo, @PathVariable int uid) {
 		photo.setUserId(uid); // probably redundant if done first on the front end 
-		return pServ.updatePhoto(photo);
+		return this.pServ.updatePhoto(photo);
 	}
 	
 	
@@ -46,7 +48,7 @@ public class PhotoController {
 	@RequestMapping(value = "/users/{uid}/photos/{pid}", method = RequestMethod.DELETE)
 	@ResponseBody
 	public boolean deletePhoto(@PathVariable int pid) {
-		return pServ.deletePhoto(pid);
+		return this.pServ.deletePhoto(pid);
 	}
 	
 }

@@ -1,11 +1,16 @@
 package dev.snapgram.services;
 
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
 import dev.snapgram.beans.Photo;
 import dev.snapgram.daos.PhotoDAO;
 import dev.snapgram.daos.PhotoDAOSpring;
 import dev.snapgram.daos.UserDAO;
 import dev.snapgram.daos.UserDAOSpring;
 
+@Component
+@Service
 public class PhotoServiceImpl implements PhotoService{
 
 	private PhotoDAO pdao;

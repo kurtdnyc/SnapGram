@@ -1,6 +1,7 @@
 package dev.snapgram.services;
 
 import dev.snapgram.beans.User;
+import dev.snapgram.exceptions.InvalidLoginException;
 
 public interface UserService {
 
@@ -10,5 +11,5 @@ public interface UserService {
 	
 	User getUserByUsername(String username);
 	
-	User getUserByLogin(String username, String password);
+	User getUserByLogin(String username, String password) throws InvalidLoginException;
 }
