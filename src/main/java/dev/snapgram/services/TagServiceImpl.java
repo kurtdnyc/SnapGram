@@ -2,42 +2,35 @@ package dev.snapgram.services;
 
 import java.util.Set;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-import dev.snapgram.beans.Photo;
-import dev.snapgram.beans.Tag;
-import dev.snapgram.daos.TagDAO;
-import dev.snapgram.daos.TagDAOSpring;
+import dev.snapgram.entities.Photo;
+import dev.snapgram.entities.Tag;
+import dev.snapgram.repositories.TagRepository;
+
 
 @Component
 @Service
 public class TagServiceImpl implements TagService{
 
-	private TagDAO tDao;
+	@Autowired
+	TagRepository tr;
 	
-	public TagServiceImpl() {
-		this.tDao = new TagDAOSpring(); 
-	}
 	
-	public TagServiceImpl(TagDAO tDao) {
-		this.tDao=tDao;
+	public TagServiceImpl(TagRepository tr) {
+		this.tr=tr;
 	}
 
 	@Override
 	public Tag createTag(Tag tag) {
-		return this.tDao.createTag(tag);
+		return this.tr.save(tag);
 	}
 
 	@Override
 	public Tag getTagById(int id) {
-		return this.tDao.getTagById(id);
+		return this.tr.findById(id).get();
 	}
-
-	@Override
-	public Set<Photo> getPhotosByTag(Tag tag){
-		return this.tDao.getPhotosByTag(tag);
-	}
-
 
 }

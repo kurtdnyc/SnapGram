@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import dev.snapgram.beans.Photo;
+import dev.snapgram.entities.Photo;
 import dev.snapgram.services.PhotoService;
 import dev.snapgram.services.PhotoServiceImpl;
 import dev.snapgram.services.UserService;

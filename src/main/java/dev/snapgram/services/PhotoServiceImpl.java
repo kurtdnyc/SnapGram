@@ -1,47 +1,42 @@
 package dev.snapgram.services;
 
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-import dev.snapgram.beans.Photo;
-import dev.snapgram.daos.PhotoDAO;
-import dev.snapgram.daos.PhotoDAOSpring;
-import dev.snapgram.daos.UserDAO;
-import dev.snapgram.daos.UserDAOSpring;
+import dev.snapgram.entities.Photo;
+import dev.snapgram.repositories.PhotoRepository;
+import dev.snapgram.repositories.UserRepository;
 
 @Component
 @Service
 public class PhotoServiceImpl implements PhotoService{
 
-	private PhotoDAO pdao;
-	
-	public PhotoServiceImpl() {
-		this.pdao = new PhotoDAOSpring();
-	}
-	
-	public PhotoServiceImpl(PhotoDAO pdao) {
-		this.pdao=pdao;
-	}
+	@Autowired
+	PhotoRepository pr;
 
 	@Override
 	public Photo createPhoto(Photo photo) {
-		return this.pdao.createPhoto(photo);
+		return this.pr.save(photo);
 	}
 
 	@Override
 	public Photo getPhotoById(int id) {
-		return this.pdao.getPhotoById(id);
+		return this.pr.findById(id).get();
 	}
 
 
 	@Override
 	public Photo updatePhoto(Photo photo) {
-		return this.pdao.updatePhoto(photo);
+		return this.pr.save(photo);
 	}
 
 	@Override
 	public boolean deletePhoto(int id) {
-		return this.pdao.deletePhoto(id);
+		pr.deleteById(id);
+		return true;
 	}
 
 

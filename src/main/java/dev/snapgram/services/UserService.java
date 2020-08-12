@@ -1,6 +1,6 @@
 package dev.snapgram.services;
 
-import dev.snapgram.beans.User;
+import dev.snapgram.entities.User;
 import dev.snapgram.exceptions.InvalidLoginException;
 
 public interface UserService {

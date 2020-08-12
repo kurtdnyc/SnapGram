@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
-import dev.snapgram.beans.User;
+import dev.snapgram.entities.User;
 
 @Component
 @Configuration

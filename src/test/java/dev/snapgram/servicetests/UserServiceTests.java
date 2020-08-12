@@ -9,9 +9,9 @@ import org.mockito.Mockito;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;
 
-import dev.snapgram.beans.User;
-import dev.snapgram.daos.UserDAO;
+import dev.snapgram.entities.User;
 import dev.snapgram.exceptions.InvalidLoginException;
+import dev.snapgram.repositories.UserRepository;
 import dev.snapgram.services.UserService;
 import dev.snapgram.services.UserServiceImpl;
 
@@ -23,7 +23,7 @@ class UserServiceTests {
 	void createUser() {
 		User bob = new User(1,"bobbyboy69@email.com","securepassword","bob","boberson");
 		
-		UserDAO uDao = Mockito.mock(UserDAO.class);
+		UserRepository uDao = Mockito.mock(UserRepository.class);
 		
 		Mockito.when(uDao.createUser(bob)).thenReturn(bob);
 		UserService uServ = new UserServiceImpl(uDao);
@@ -37,7 +37,7 @@ class UserServiceTests {
 	void getUserById() {
 		User bob = new User(1,"bobbyboy69@email.com","securepassword","bob","boberson");
 		
-		UserDAO uDao = Mockito.mock(UserDAO.class);
+		UserRepository uDao = Mockito.mock(UserRepository.class);
 		
 		Mockito.when(uDao.getUserById(1)).thenReturn(bob);
 		UserService uServ = new UserServiceImpl(uDao);
@@ -57,7 +57,7 @@ class UserServiceTests {
 	void getUserByLogin() throws InvalidLoginException {
 		User bob = new User(1,"bobbyboy69@email.com","securepassword","bob","boberson");
 		
-		UserDAO uDao = Mockito.mock(UserDAO.class);
+		UserRepository uDao = Mockito.mock(UserRepository.class);
 		
 		Mockito.when(uDao.getUserByLogin("bobbyboy69@email.com","securepassword")).thenReturn(bob);
 		UserService uServ = new UserServiceImpl(uDao);

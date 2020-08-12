@@ -1,7 +1,12 @@
-package dev.snapgram.beans;
+package dev.snapgram.entities;
 
 import java.util.Set;
 
+
+import javax.persistence.*;
+
+@Entity
+@Table(name ="photo")
 public class Photo {
 	
 	private int photoId;

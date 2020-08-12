@@ -7,10 +7,10 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.mockito.Mockito;
 
-import dev.snapgram.beans.Photo;
-import dev.snapgram.beans.User;
-import dev.snapgram.daos.PhotoDAO;
-import dev.snapgram.daos.UserDAO;
+import dev.snapgram.entities.Photo;
+import dev.snapgram.entities.User;
+import dev.snapgram.repositories.PhotoRepository;
+import dev.snapgram.repositories.UserRepository;
 import dev.snapgram.services.PhotoService;
 import dev.snapgram.services.PhotoServiceImpl;
 
@@ -24,7 +24,7 @@ class PhotoServiceTests {
 		Photo flick = new Photo(3,null,"selfie","mad cute",1);
 		
 		
-		PhotoDAO pDao = Mockito.mock(PhotoDAO.class);
+		PhotoRepository pDao = Mockito.mock(PhotoRepository.class);
 		
 		
 		Mockito.when(pDao.createPhoto(flick)).thenReturn(flick);
@@ -43,7 +43,7 @@ class PhotoServiceTests {
 		Photo flick = new Photo(3,null,"selfie","mad cute",1);
 		
 		
-		PhotoDAO pDao = Mockito.mock(PhotoDAO.class);
+		PhotoRepository pDao = Mockito.mock(PhotoRepository.class);
 		
 		
 		Mockito.when(pDao.getPhotoById(3)).thenReturn(flick);
@@ -61,7 +61,7 @@ class PhotoServiceTests {
 		Photo updatedFlick = new Photo(3,null,"yikes","mad cute",1);
 		
 		
-		PhotoDAO pDao = Mockito.mock(PhotoDAO.class);
+		PhotoRepository pDao = Mockito.mock(PhotoRepository.class);
 		
 		
 		Mockito.when(pDao.updatePhoto(flick)).thenReturn(updatedFlick);
@@ -79,7 +79,7 @@ class PhotoServiceTests {
 		
 		
 		
-		PhotoDAO pDao = Mockito.mock(PhotoDAO.class);
+		PhotoRepository pDao = Mockito.mock(PhotoRepository.class);
 		
 		
 		Mockito.when(pDao.deletePhoto(3)).thenReturn(true);

@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import dev.snapgram.beans.User;
 import dev.snapgram.dtos.LoginDTO;
+import dev.snapgram.entities.User;
 import dev.snapgram.exceptions.InvalidLoginException;
 import dev.snapgram.services.UserService;
 

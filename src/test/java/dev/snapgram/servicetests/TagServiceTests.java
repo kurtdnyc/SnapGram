@@ -11,9 +11,9 @@ import java.util.Set;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 
-import dev.snapgram.beans.Photo;
-import dev.snapgram.beans.Tag;
-import dev.snapgram.daos.TagDAO;
+import dev.snapgram.entities.Photo;
+import dev.snapgram.entities.Tag;
+import dev.snapgram.repositories.TagRepository;
 import dev.snapgram.services.TagService;
 import dev.snapgram.services.TagServiceImpl;
 
@@ -25,7 +25,7 @@ class TagServiceTests {
 	void createTag() {
 		Tag tag = new Tag(1,"nature");
 		
-		TagDAO tDao = Mockito.mock(TagDAO.class);
+		TagRepository tDao = Mockito.mock(TagRepository.class);
 		
 		Mockito.when(tDao.createTag(tag)).thenReturn(tag);
 
@@ -40,7 +40,7 @@ class TagServiceTests {
 	void getTagById() {
 		Tag tag = new Tag(1,"nature");
 		
-		TagDAO tDao = Mockito.mock(TagDAO.class);
+		TagRepository tDao = Mockito.mock(TagRepository.class);
 		
 		Mockito.when(tDao.getTagById(1)).thenReturn(tag);
 
@@ -68,7 +68,7 @@ class TagServiceTests {
 		fakePhotos.add(flick2);
 		fakePhotos.add(flick3);
 		
-		TagDAO tDao = Mockito.mock(TagDAO.class);
+		TagRepository tDao = Mockito.mock(TagRepository.class);
 		
 		Mockito.when(tDao.getPhotosByTag(tag)).thenReturn(fakePhotos);
 

@@ -2,9 +2,9 @@ package dev.snapgram.services;
 
 import java.util.Set;
 
-import dev.snapgram.beans.Photo;
-import dev.snapgram.beans.Tag;
-import dev.snapgram.beans.User;
+import dev.snapgram.entities.Photo;
+import dev.snapgram.entities.Tag;
+import dev.snapgram.entities.User;
 
 public interface PhotoService {
 
@@ -14,5 +14,5 @@ public interface PhotoService {
 	
 	Photo updatePhoto(Photo photo);
 	
-	boolean deletePhoto(int photo);
+	boolean deletePhoto(int id);
 }

@@ -3,45 +3,42 @@ package dev.snapgram.services;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-import dev.snapgram.beans.User;
-import dev.snapgram.daos.UserDAO;
-import dev.snapgram.daos.UserDAOSpring;
+import dev.snapgram.entities.User;
 import dev.snapgram.exceptions.InvalidLoginException;
+import dev.snapgram.repositories.UserRepository;
+import dev.snapgram.repositories.UserDAOSpring;
 
 @Component
 @Service
 public class UserServiceImpl implements UserService {
 
-	private UserDAO udao;
+	UserRepository ur;
 	
 	
-	public UserServiceImpl() {
+	public UserServiceImpl(UserRepository ur) {
 		super();
-		this.udao = new UserDAOSpring();
-	}
-	
-	public UserServiceImpl(UserDAO udao) {
-		super();
-		this.udao=udao;
+		this.ur=ur;
 	}
 	
 	@Override
 	public User createUser(User user) {
-		return this.udao.createUser(user);
+		return this.ur.save(user);
 	}
 
 	@Override
 	public User getUserById(int id) {
-		return this.udao.getUserById(id);
+		return this.ur.findById(id).get();
 	}
 
 	@Override
 	public User getUserByLogin(String username, String password) throws InvalidLoginException {
-		return this.udao.getUserByLogin(username, password);
+		// how
+		return null;
 	}
 
 	@Override
 	public User getUserByUsername(String username) {
+		// how
 		return null;
 	}
 
