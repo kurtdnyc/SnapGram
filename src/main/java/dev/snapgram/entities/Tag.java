@@ -1,18 +1,15 @@
 package dev.snapgram.entities;
 
-import java.util.Set;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 @Table(name ="tag")
@@ -26,8 +23,10 @@ public class Tag {
 	@Column(name = "tag_name")
 	private String tagName;
 	
-	@ManyToMany(mappedBy = "tags", fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST,CascadeType.MERGE})
-	private Set<Photo> photos;
+	@ManyToOne
+	@JsonBackReference
+	@JoinColumn(name = "p_id")
+	private Photo photo;
 	
 	public Tag() {
 		super();
@@ -52,21 +51,17 @@ public class Tag {
 		this.tagName = tagName;
 	}
 	
-	public Set<Photo> getPhotos() {
-		return photos;
+	public Photo getPhoto() {
+		return photo;
 	}
-	public void setPhotos(Set<Photo> photos) {
-		this.photos = photos;
+	public void setPhoto(Photo photo) {
+		this.photo = photo;
 	}
 
 	@Override
 	public String toString() {
 		return "Tag [tagId=" + tagId + ", " + (tagName != null ? "tagName=" + tagName + ", " : "")
-				+ (photos != null ? "photos=" + photos : "") + "]";
+				+ (photo != null ? "photo=" + photo : "") + "]";
 	}
-	
-	
-	
-	
 
 }
