@@ -1,0 +1,605 @@
+{
+	"info": {
+		"_postman_id": "d0d23a2d-60eb-4bdc-9abe-bfa3d29b8aaa",
+		"name": "SnapGram Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create michael",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4e07b26c-9040-46d1-b2d3-4d907b2940e8",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userId\": 0, \"username\": \"mike123\", \"password\": \"password\", \"fName\": \"Michael\", \"lName\": \"Scott\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create Frodo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "25bef52d-3535-4ccd-a69c-89db6fc1fbcc",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userId\": 0, \"username\": \"ringholder\", \"password\": \"shire123\", \"fName\": \"Frodo\", \"lName\": \"Baggins\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create michaels photo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ab945a3e-80ec-4764-bcbd-005dc2e1a9b2",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"photoId\": 0, \"photoUrl\": \"twitter.com\", \"photoName\": \"Dog\", \"photoDescription\": \"My adorable dog\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/1/photos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"1",
+						"photos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create michaels photo 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "55e28107-68fe-456b-98d8-960e0e77a423",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"photoId\": 0, \"photoUrl\": \"google.com\", \"photoName\": \"cat\", \"photoDescription\": \"my adorable cat\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/1/photos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"1",
+						"photos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create frodo photo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5c5ef212-9016-4542-be26-bded533ac185",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"photoId\": 0, \"photoUrl\": \"facebook.com\", \"photoName\": \"selfie\", \"photoDescription\": \"x0x0x0x0\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/2/photos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"2",
+						"photos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create tag meow",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a9893446-d3e2-47f6-b042-e68a9abca21b",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"tagId\": 0, \"tagName\": \"meow\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/2/photos/1/tags",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"2",
+						"photos",
+						"1",
+						"tags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search by username",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3bc9a252-fb91-4836-8d4e-c11422111bc1",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Frodo\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"employeeId\": 0, \"empUsername\": \"kurt1997\", \"empPassword\": \"97yuhbirw\", \"empfName\": \"Kurt\", \"emplName\": \"Dawiec\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users?username=ringholder",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "ringholder"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user by id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4a3bb9e6-4cd5-4f80-beca-03567a3d8d4f",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"michael\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"employeeId\": 0, \"empUsername\": \"kurt1997\", \"empPassword\": \"97yuhbirw\", \"empfName\": \"Kurt\", \"emplName\": \"Dawiec\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get photo by id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "369187ca-22d6-44a3-a99c-2680404ec53c",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Dog\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"employeeId\": 0, \"empUsername\": \"kurt1997\", \"empPassword\": \"97yuhbirw\", \"empfName\": \"Kurt\", \"emplName\": \"Dawiec\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/1/photo/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"1",
+						"photo",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all michaels photos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d3e1d09c-2800-44c0-8140-3fb3a7638e4c",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Dog\");\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Cat\");\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.not.include(\"selfie\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"employeeId\": 0, \"empUsername\": \"kurt1997\", \"empPassword\": \"97yuhbirw\", \"empfName\": \"Kurt\", \"emplName\": \"Dawiec\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/1/photos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"1",
+						"photos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get photo by tag",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fd87b960-b5bb-480b-ae49-c9b745258dd2",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Cat\");\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.not.include(\"Dog\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"employeeId\": 0, \"empUsername\": \"kurt1997\", \"empPassword\": \"97yuhbirw\", \"empfName\": \"Kurt\", \"emplName\": \"Dawiec\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/1/photos?hastag=meow",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"1",
+						"photos"
+					],
+					"query": [
+						{
+							"key": "hastag",
+							"value": "meow"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update photo url",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c92256e9-5ea5-43f9-b6e3-82d508ec76f6",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"coolmathgames.com\");\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.not.include(\"twitter.com\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"photoId\": 0, \"photoUrl\": \"coolmathgames.com\", \"photoName\": \"Dog\", \"photoDescription\": \"My adorable dog\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/1/photos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"1",
+						"photos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete photo 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ffc75747-ffc0-4e90-a3d9-8b8b1d5bad64",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"photoId\": 0, \"photoUrl\": \"coolmathgames.com\", \"photoName\": \"Dog\", \"photoDescription\": \"My adorable dog\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/1/photos/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"1",
+						"photos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
