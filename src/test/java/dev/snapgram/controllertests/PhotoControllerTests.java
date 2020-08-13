@@ -2,6 +2,7 @@ package dev.snapgram.controllertests;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.junit.jupiter.api.Test;
@@ -11,7 +12,11 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
+
+import com.google.gson.Gson;
+
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.MediaType;
 
 import dev.snapgram.entities.Photo;
 import dev.snapgram.entities.User;
@@ -31,15 +36,18 @@ class PhotoControllerTests {
 	MockMvc mvc;
 	
 	@Test
-	void createPhotoTest() {
+	void createPhotoTest() throws Exception {
 		
-		//not sure how to mock post requests
+		String jsonUser = "{\"uId\":1,\"username\":\"mikeusername\",\"password\":\"mikepassword\",\"fname\":\"Mike\",\"lname\":\"Richards\"}";
+		String jsonPhoto = "{\"photoId\":1,\"photo_url\":\"cat.jpg\",\"photoName\":\"cat\",\"photoDescription\":\"cat description\",\"user\":"
+				+ jsonUser + "}";
+		Gson gson = new Gson();
 		
-//		Mockito.when(us.getUserById(1)).thenReturn(new User(1, "Mike", "password123", "Mike", "Richardson"));
-//		
-//		ResultActions ra = mvc.perform(post("/users/1/photos")
-//					.content(asJsonString(new Photo(0, "cat.jpg", "cat", "cat playing", us.getUserById(1), null))));
-//		ra.andExpect(status().isOk());
+		Photo photo = gson.fromJson(jsonPhoto, Photo.class);
+		Mockito.when(ps.createPhoto(photo)).thenReturn(photo);
+		
+		ResultActions ra = mvc.perform(post("/users/1/photos").contentType(MediaType.APPLICATION_JSON_VALUE).content(jsonPhoto));
+		ra.andExpect(status().isOk());
 		
 	}
 	
