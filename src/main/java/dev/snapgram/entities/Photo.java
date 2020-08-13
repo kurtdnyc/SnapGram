@@ -33,18 +33,16 @@ public class Photo {
 	@JoinColumn(name = "u_id")
 	private User user;
 	
-	@ManyToMany(fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST,CascadeType.MERGE})
-	@JoinTable(name = "photo_tags",joinColumns = { @JoinColumn(name = "t_id") }, inverseJoinColumns = { @JoinColumn(name = "p_id") })
+	@OneToMany(mappedBy = "photo")
 	private Set<Tag> tags = new HashSet<Tag>();
 	
-	public Photo(int photoId, String photoUrl, String photoName, String photoDescription, User user, Set<Tag> tags) {
+	public Photo(int photoId, String photoUrl, String photoName, String photoDescription, User user) {
 		super();
 		this.photoId = photoId;
 		this.photoUrl = photoUrl;
 		this.photoName = photoName;
 		this.photoDescription = photoDescription;
 		this.user = user;
-		this.tags = tags;
 	}
 
 	public Photo() {
