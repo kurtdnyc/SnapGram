@@ -32,7 +32,7 @@ public class TagController {
 	
 	@RequestMapping(value = "/tags/{tid}", method = RequestMethod.GET)
 	@ResponseBody
-	public Set<Photo> getPhotosByTag(@PathVariable int tid) {
-		return this.tServ.getTagById(tid).getPhotos();
+	public Photo getPhotosByTag(@PathVariable int tid) {
+		return this.tServ.getTagById(tid).getPhoto();
 	}
 }
