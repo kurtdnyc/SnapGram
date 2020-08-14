@@ -33,4 +33,9 @@ public class TagServiceImpl implements TagService{
 		return this.tr.findById(id).get();
 	}
 
+	@Override
+	public Set<Tag> getTagsByName(String name) {
+		return this.tr.findByTagName(name);
+	}
+
 }

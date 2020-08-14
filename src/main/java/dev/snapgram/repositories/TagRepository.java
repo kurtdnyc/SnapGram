@@ -6,7 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
-import dev.snapgram.entities.Photo;
 import dev.snapgram.entities.Tag;
 
 
@@ -14,5 +13,5 @@ import dev.snapgram.entities.Tag;
 @Repository
 public interface TagRepository extends CrudRepository<Tag,Integer>{
 	
-
+	Set<Tag> findByTagName(String tagName);
 }

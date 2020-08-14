@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "d0d23a2d-60eb-4bdc-9abe-bfa3d29b8aaa",
+		"_postman_id": "27339454-a2a1-420f-b9e0-14a3ad28cd8a",
 		"name": "SnapGram Tests",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -11,7 +11,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "4e07b26c-9040-46d1-b2d3-4d907b2940e8",
+						"id": "9a1ceddd-21a3-4e4a-81d7-666474a45683",
 						"exec": [
 							"pm.test(\"Status code is 201\", function () {\r",
 							"    pm.response.to.have.status(201);\r",
@@ -52,7 +52,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "25bef52d-3535-4ccd-a69c-89db6fc1fbcc",
+						"id": "85d00d15-df88-4917-bfbb-39b6615619b7",
 						"exec": [
 							"pm.test(\"Status code is 201\", function () {\r",
 							"    pm.response.to.have.status(201);\r",
@@ -93,7 +93,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ab945a3e-80ec-4764-bcbd-005dc2e1a9b2",
+						"id": "32021691-b6de-47bc-b8ca-9cf8d447359d",
 						"exec": [
 							"pm.test(\"Status code is 201\", function () {\r",
 							"    pm.response.to.have.status(201);\r",
@@ -136,7 +136,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "55e28107-68fe-456b-98d8-960e0e77a423",
+						"id": "0e8dc6e4-cf59-496e-9399-86b0ad2135e4",
 						"exec": [
 							"pm.test(\"Status code is 201\", function () {\r",
 							"    pm.response.to.have.status(201);\r",
@@ -179,7 +179,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "5c5ef212-9016-4542-be26-bded533ac185",
+						"id": "a532b04d-4ee0-4e28-b76a-9405730347c6",
 						"exec": [
 							"pm.test(\"Status code is 201\", function () {\r",
 							"    pm.response.to.have.status(201);\r",
@@ -222,7 +222,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "a9893446-d3e2-47f6-b042-e68a9abca21b",
+						"id": "4d34133f-23bf-4ade-838d-adde89173256",
 						"exec": [
 							"pm.test(\"Status code is 201\", function () {\r",
 							"    pm.response.to.have.status(201);\r",
@@ -267,7 +267,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "3bc9a252-fb91-4836-8d4e-c11422111bc1",
+						"id": "1927aec7-73fa-48b5-82ed-bd8436651dd6",
 						"exec": [
 							"pm.test(\"Body matches string\", function () {\r",
 							"    pm.expect(pm.response.text()).to.include(\"Frodo\");\r",
@@ -317,10 +317,10 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "4a3bb9e6-4cd5-4f80-beca-03567a3d8d4f",
+						"id": "8d973397-f886-4c8d-8b08-5f28d15068c6",
 						"exec": [
 							"pm.test(\"Body matches string\", function () {\r",
-							"    pm.expect(pm.response.text()).to.include(\"michael\");\r",
+							"    pm.expect(pm.response.text()).to.include(\"Michael\");\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -362,7 +362,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "369187ca-22d6-44a3-a99c-2680404ec53c",
+						"id": "cf148fad-5278-41fc-8a12-1194d754d02e",
 						"exec": [
 							"pm.test(\"Body matches string\", function () {\r",
 							"    pm.expect(pm.response.text()).to.include(\"Dog\");\r",
@@ -380,7 +380,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"employeeId\": 0, \"empUsername\": \"kurt1997\", \"empPassword\": \"97yuhbirw\", \"empfName\": \"Kurt\", \"emplName\": \"Dawiec\"}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -388,7 +388,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/users/1/photo/1",
+					"raw": "localhost:8080/users/1/photos/1",
 					"host": [
 						"localhost"
 					],
@@ -396,7 +396,7 @@
 					"path": [
 						"users",
 						"1",
-						"photo",
+						"photos",
 						"1"
 					]
 				}
@@ -409,13 +409,13 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "d3e1d09c-2800-44c0-8140-3fb3a7638e4c",
+						"id": "a991809a-a57d-4625-8b2a-07641a201937",
 						"exec": [
 							"pm.test(\"Body matches string\", function () {\r",
 							"    pm.expect(pm.response.text()).to.include(\"Dog\");\r",
 							"});\r",
 							"pm.test(\"Body matches string\", function () {\r",
-							"    pm.expect(pm.response.text()).to.include(\"Cat\");\r",
+							"    pm.expect(pm.response.text()).to.include(\"cat\");\r",
 							"});\r",
 							"pm.test(\"Body matches string\", function () {\r",
 							"    pm.expect(pm.response.text()).to.not.include(\"selfie\");\r",
@@ -461,13 +461,13 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "fd87b960-b5bb-480b-ae49-c9b745258dd2",
+						"id": "55b6c54b-6824-466b-8a8b-7bb643be0d86",
 						"exec": [
 							"pm.test(\"Body matches string\", function () {\r",
-							"    pm.expect(pm.response.text()).to.include(\"Cat\");\r",
+							"    pm.expect(pm.response.text()).to.include(\"cat\");\r",
 							"});\r",
 							"pm.test(\"Body matches string\", function () {\r",
-							"    pm.expect(pm.response.text()).to.not.include(\"Dog\");\r",
+							"    pm.expect(pm.response.text()).to.include(\"Dog\");\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -516,7 +516,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "c92256e9-5ea5-43f9-b6e3-82d508ec76f6",
+						"id": "2dad752a-51bb-4d2d-a657-4538c4aa3112",
 						"exec": [
 							"pm.test(\"Body matches string\", function () {\r",
 							"    pm.expect(pm.response.text()).to.include(\"coolmathgames.com\");\r",
@@ -562,7 +562,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ffc75747-ffc0-4e90-a3d9-8b8b1d5bad64",
+						"id": "c6148f78-122d-4b65-8cef-6abba8d6d594",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
