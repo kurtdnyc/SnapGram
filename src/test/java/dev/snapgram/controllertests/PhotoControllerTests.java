@@ -3,12 +3,14 @@ package dev.snapgram.controllertests;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.autoconfigure.web.ResourceProperties.Content;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
@@ -21,6 +23,7 @@ import org.springframework.http.MediaType;
 import dev.snapgram.entities.Photo;
 import dev.snapgram.entities.User;
 import dev.snapgram.services.PhotoService;
+import dev.snapgram.services.TagService;
 import dev.snapgram.services.UserService;
 
 @AutoConfigureMockMvc
@@ -31,6 +34,8 @@ class PhotoControllerTests {
 	PhotoService ps;
 	@MockBean
 	UserService us;
+	@MockBean
+	TagService ts;
 	
 	@Autowired
 	MockMvc mvc;
@@ -38,31 +43,35 @@ class PhotoControllerTests {
 	@Test
 	void createPhotoTest() throws Exception {
 		
-		String jsonUser = "{\"uId\":1,\"username\":\"mikeusername\",\"password\":\"mikepassword\",\"fname\":\"Mike\",\"lname\":\"Richards\"}";
-		String jsonPhoto = "{\"photoId\":1,\"photo_url\":\"cat.jpg\",\"photoName\":\"cat\",\"photoDescription\":\"cat description\",\"user\":"
-				+ jsonUser + "}";
+		String json = "{\"photoId\": 2, \"photoUrl\": \"twitter.com\", \"photoName\": \"Dog\", \"photoDescription\": \"My adorable dog\"}";
+
 		Gson gson = new Gson();
 		
-		Photo photo = gson.fromJson(jsonPhoto, Photo.class);
-		Mockito.when(ps.createPhoto(photo)).thenReturn(photo);
+		Photo photo = gson.fromJson(json, Photo.class);
 		
-		ResultActions ra = mvc.perform(post("/users/1/photos").contentType(MediaType.APPLICATION_JSON_VALUE).content(jsonPhoto));
+		Mockito.when(ps.createPhoto(photo)).thenReturn(photo);
+		ResultActions ra = mvc.perform(post("/users/1/photos").contentType(MediaType.APPLICATION_JSON_VALUE).content(json));
 		ra.andExpect(status().isOk());
 		
 	}
 	
 	@Test
 	void getPhotoByIdTest() throws Exception {
-		Mockito.when(us.getUserById(1)).thenReturn(new User(1, "Mike", "password123", "Mike", "Richardson"));
-		Mockito.when(ps.getPhotoById(1)).thenReturn(new Photo(1, "", "cat", "cat desc",us.getUserById(1)));
-		
 		ResultActions ra = mvc.perform(get("/users/1/photos/1"));
 		ra.andExpect(status().isOk());
 	}
 	
 	@Test
-	void editPhotoTest() {
-		//not sure how to mock edit requests
+	void editPhotoTest() throws Exception {
+		String json = "{\"photoId\": 1, \"photoUrl\": \"facebook.com\", \"photoName\": \"Dog\", \"photoDescription\": \"My adorable dog\"}";
+
+		Gson gson = new Gson();
+		
+		Photo photo = gson.fromJson(json, Photo.class);
+		
+		Mockito.when(ps.createPhoto(photo)).thenReturn(photo);
+		ResultActions ra = mvc.perform(put("/users/1/photos").contentType(MediaType.APPLICATION_JSON_VALUE).content(json));
+		ra.andExpect(status().isOk());
 	}
 	
 	@Test
