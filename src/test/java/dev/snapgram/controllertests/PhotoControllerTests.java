@@ -10,7 +10,6 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.autoconfigure.web.ResourceProperties.Content;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
@@ -21,13 +20,12 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 
 import dev.snapgram.entities.Photo;
-import dev.snapgram.entities.User;
 import dev.snapgram.services.PhotoService;
 import dev.snapgram.services.TagService;
 import dev.snapgram.services.UserService;
 
 @AutoConfigureMockMvc
-@SpringBootTest(classes = dev.snapgram.controllers.PhotoController.class)
+@SpringBootTest(classes = dev.snapgram.app.SnapGramSpringApplication.class)
 class PhotoControllerTests {
 
 	@MockBean
@@ -51,7 +49,7 @@ class PhotoControllerTests {
 		
 		Mockito.when(ps.createPhoto(photo)).thenReturn(photo);
 		ResultActions ra = mvc.perform(post("/users/1/photos").contentType(MediaType.APPLICATION_JSON_VALUE).content(json));
-		ra.andExpect(status().isOk());
+		ra.andExpect(status().isCreated());
 		
 	}
 	
@@ -61,6 +59,18 @@ class PhotoControllerTests {
 		ra.andExpect(status().isOk());
 	}
 	
+	@Test
+	void getAllPhotosTest() throws Exception{
+		
+		ResultActions ra = mvc.perform(get("/users/1/photos").param("hashtag", "null"));
+		ra.andExpect(status().isOk());
+	}
+	@Test
+	void getPhotosByTagTest() throws Exception{
+		
+		ResultActions ra = mvc.perform(get("/users/1/photos").param("hashtag", "meow"));
+		ra.andExpect(status().isOk());
+	}
 	@Test
 	void editPhotoTest() throws Exception {
 		String json = "{\"photoId\": 1, \"photoUrl\": \"facebook.com\", \"photoName\": \"Dog\", \"photoDescription\": \"My adorable dog\"}";
