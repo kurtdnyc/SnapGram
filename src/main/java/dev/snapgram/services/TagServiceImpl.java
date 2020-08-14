@@ -37,5 +37,11 @@ public class TagServiceImpl implements TagService{
 	public Set<Tag> getTagsByName(String name) {
 		return this.tr.findByTagName(name);
 	}
+	
+	@Override
+	public boolean deleteTag(int id) {
+		this.tr.deleteById(id);
+		return true;
+	}
 
 }

@@ -9,4 +9,5 @@ public interface TagService {
 	Tag createTag(Tag tag);
 	Tag getTagById(int id);
 	Set<Tag> getTagsByName(String name);
+	boolean deleteTag(int tid);
 }
