@@ -44,4 +44,10 @@ public class TagController {
 		return this.tServ.getTagById(tid).getPhoto();
 	}
 	
+	@RequestMapping(value = "users/{uid}/photos/{pid}/tags/{tid}", method = RequestMethod.DELETE)
+	@ResponseBody
+	public boolean deleteTag(@PathVariable int tid) {
+		return this.tServ.deleteTag(tid);
+	}
+	
 }

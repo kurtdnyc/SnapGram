@@ -33,7 +33,7 @@ public class Photo {
 	@JoinColumn(name = "u_id")
 	private User user;
 	
-	@OneToMany(mappedBy = "photo")
+	@OneToMany(mappedBy = "photo", cascade=CascadeType.REMOVE) 
 	private Set<Tag> tags = new HashSet<Tag>();
 	
 	public Photo(int photoId, String photoUrl, String photoName, String photoDescription, User user) {
