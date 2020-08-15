@@ -55,7 +55,7 @@ public class AWSS3ServiceImpl implements AWSS3Service {
     }
  
     private void uploadFileToS3Bucket(final String bucketName, final File file) {
-        final String uniqueFileName = LocalDateTime.now() + "_" + file.getName();
+        final String uniqueFileName = file.getName();
         LOGGER.info("Uploading file with name= " + uniqueFileName);
         final PutObjectRequest putObjectRequest = new PutObjectRequest(bucketName, uniqueFileName, file);
         amazonS3.putObject(putObjectRequest);

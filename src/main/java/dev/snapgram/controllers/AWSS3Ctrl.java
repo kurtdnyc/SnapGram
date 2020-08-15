@@ -21,7 +21,10 @@ public class AWSS3Ctrl {
     @PostMapping(value= "/upload")
     public ResponseEntity<String> uploadFile(@RequestPart(value= "file") final MultipartFile multipartFile) {
         service.uploadFile(multipartFile);
-        final String response = "[" + multipartFile.getOriginalFilename() + "] uploaded successfully.";
+      
+        final String response = "https://snapgram-s3-bucket.s3.us-east-2.amazonaws.com/" + multipartFile.getOriginalFilename() ;
+        
+
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }
