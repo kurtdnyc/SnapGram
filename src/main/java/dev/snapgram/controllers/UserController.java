@@ -34,7 +34,7 @@ public class UserController {
 	@ResponseBody
 	public User loginUser(@RequestBody LoginDTO dto, HttpServletResponse httpServletResponse) throws InvalidLoginException, IOException {
 		User user = this.uServ.getUserByLogin(dto.getUsername(), dto.getPassword());
-
+		
 		return user;
 	}
 	
