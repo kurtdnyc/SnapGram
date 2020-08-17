@@ -14,6 +14,7 @@ import dev.snapgram.services.AWSS3Service;
  
 @RestController
 @RequestMapping(value= "/s3")
+@CrossOrigin("*")
 public class AWSS3Ctrl {
  
     @Autowired
