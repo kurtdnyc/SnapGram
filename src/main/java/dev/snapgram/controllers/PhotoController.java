@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.google.gson.Gson;
+
 import dev.snapgram.entities.Photo;
 import dev.snapgram.entities.Tag;
 import dev.snapgram.entities.User;
@@ -29,7 +31,7 @@ import dev.snapgram.services.UserServiceImpl;
 
 @Component
 @RestController
-@CrossOrigin("*")
+@CrossOrigin(origins="*", allowedHeaders = "*")
 public class PhotoController {
 
 	@Autowired
@@ -40,7 +42,6 @@ public class PhotoController {
 	TagService tServ;
 	
 	@RequestMapping(value = "/users/{uid}/photos", method = RequestMethod.POST)
-	@ResponseBody
 	@ResponseStatus(HttpStatus.CREATED)
 	public Photo createPhoto(@RequestBody Photo photo, @PathVariable int uid) {
 		
