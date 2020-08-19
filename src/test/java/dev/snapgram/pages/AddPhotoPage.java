@@ -22,10 +22,12 @@ public class AddPhotoPage {
 	public WebElement photoNameField;
 	@FindBy(id = "photoDescription")
 	public WebElement captionField;
-	@FindBy(id = "tag_input")
+	@FindBy(id = "addTag")
 	public WebElement tagsField;
 	@FindBy(id = "photoUploadImage")
 	public WebElement uploadPhotoBtn;
 	@FindBy(id = "savePhotoButton")
 	public WebElement savePhotoBtn;
+	@FindBy(id = "addTagButton")
+	public WebElement addTagBtn;
 }

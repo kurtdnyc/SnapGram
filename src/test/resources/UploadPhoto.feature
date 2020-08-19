@@ -21,20 +21,25 @@ Examples:
 	|C:\Users\Mnaum\Desktop\project2_images\frodoAndSam.jfif|Frodo and Sam|Frodo and Sam right after destroying the ring|
 	|C:\Users\Mnaum\Desktop\project2_images\frodoAtRivendell.jfif|Frodo at Rivendell|Frodo accepting the quest at Rivendell|
 	|C:\Users\Mnaum\Desktop\project2_images\frodoSamAndGollumn.jfif|Frodo with Sam and Gollum|Frodo, Sam, and Gollum looking at the elephants|
+	
+	
+Scenario Outline: A user uploads photo of reasonable size with tags
+	When "<image>" is selected from computer
+	And enters "<name>" of photo into name field
+	And enters "<description>" of photo into the description field
+	And enters "<tag>" to photo
+	And clicks add tag button
+	And clicks on the upload photo button
+	Then user should be redirected to their home page
+	And image with "<name>" should have "<tag>"
+	
+Examples:
+	|image|name|description|tag|
+	|C:\Users\Mnaum\Desktop\project2_images\frodoAndSam.jfif|Frodo and Sam|Frodo and Sam right after destroying the ring|sad|
+	|C:\Users\Mnaum\Desktop\project2_images\frodoAtRivendell.jfif|Frodo at Rivendell|Frodo accepting the quest at Rivendell|brave|
+	|C:\Users\Mnaum\Desktop\project2_images\frodoSamAndGollumn.jfif|Frodo with Sam and Gollum|Frodo, Sam, and Gollum looking at the elephants|watchful|
+	
 
-#Scenario Outline: user uploads photo of reasonable size with tags
-#	When "<image>" is selected from computer
-#	And enters "<name>" of photo into name field
-#	And enters "<description>" of photo into the description field
-#	And enters "<tag>" to photo
-#	And clicks on the upload photo button
-#	Then user should be redirected to their home page
-#	
-#Examples:
-#	|image|name|description|tag|
-#	|C:\Users\Mnaum\Desktop\project2_images\frodoAndSam.jfif|Frodo and Sam|Frodo and Sam right after destroying the ring|
-#	|C:\Users\Mnaum\Desktop\project2_images\frodoAtRivendell.jfif|Frodo at Rivendell|Frodo accepting the quest at Rivendell|
-#	|C:\Users\Mnaum\Desktop\project2_images\frodoSamAndGollumn.jfif|Frodo with Sam and Gollum|Frodo, Sam, and Gollum looking at the elephants|
-#	
+
 	
 	

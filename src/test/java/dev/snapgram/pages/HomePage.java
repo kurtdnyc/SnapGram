@@ -1,5 +1,8 @@
 package dev.snapgram.pages;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,8 +23,8 @@ public class HomePage {
 	public WebElement usernameField;
 	@FindBy(id = "logout_btn")
 	public WebElement logoutBtn;
-	@FindBy(id = "search_bar")
-	public WebElement searchBar;
+	@FindBy(id = "user-lookup")
+	public WebElement lookupUser;
 	@FindBy(id = "add-photo-button")
 	public WebElement addPhotoBtn;
 	@FindBy(id = "edit_photo_btn")
@@ -30,8 +33,9 @@ public class HomePage {
 	public WebElement deletePhotoBtn;
 	@FindBy(id = "mat-expansion-panel-header-0")
 	public WebElement headerBar;
-	
-	//Still need filter elements, not sure how to get those yet
-	
+	@FindBy(id = "homepage-username-label")
+	public WebElement homepageUsernameLabel;
+	@FindBy(id = "search_photo")
+	public WebElement searchPhotoElement;
 	
 }

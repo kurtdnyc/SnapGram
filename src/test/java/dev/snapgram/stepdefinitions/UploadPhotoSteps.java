@@ -1,8 +1,13 @@
 package dev.snapgram.stepdefinitions;
 
 import static org.junit.Assert.assertEquals;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.forwardedUrl;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -18,6 +23,7 @@ import dev.snapgram.runners.SnapGramRunner;
 import junit.framework.Assert;
 
 public class UploadPhotoSteps {
+	
 	public static LoginPage loginPage = SnapGramRunner.loginPage;
 	public static HomePage homePage = SnapGramRunner.homePage;
 	public static AddPhotoPage addPhotoPage = SnapGramRunner.addPhotoPage;
@@ -28,13 +34,13 @@ public class UploadPhotoSteps {
 	@When("^user enters valid username into username field$")
 	public void user_enters_valid_username_into_username_field() throws Throwable {
 		loginPage.username.click();
-		loginPage.username.sendKeys("ringbearer");
+		loginPage.username.sendKeys("samwiseTheBrave");
 	}
 
 	@When("^user enters valid password into password field$")
 	public void user_enters_valid_password_into_password_field() throws Throwable {
 		loginPage.password.click();
-		loginPage.password.sendKeys("shire123");
+		loginPage.password.sendKeys("mrFrodo");
 	}
 
 	@When("^user clicks on upload photo button$")
@@ -64,6 +70,26 @@ public class UploadPhotoSteps {
 	@When("^clicks on the upload photo button$")
 	public void clicks_on_the_upload_photo_button() throws Throwable {
 		actions.moveToElement(addPhotoPage.savePhotoBtn).click(addPhotoPage.savePhotoBtn).build().perform();
+	}
+	
+	@When("^enters \"([^\"]*)\" to photo$")
+	public void enters_to_photo(String arg1) throws Throwable {
+	    addPhotoPage.tagsField.sendKeys(arg1);
+	}
+
+	@When("^clicks add tag button$")
+	public void clicks_add_tag_button() throws Throwable {
+	    addPhotoPage.addTagBtn.click();
+	}
+	
+	@Then("^image with \"([^\"]*)\" should have \"([^\"]*)\"$")
+	public void image_with_should_have(String arg1, String arg2) throws Throwable {
+		Thread.sleep(300);
+	    List<WebElement> cardTitles = driver.findElements(By.id("card-title"));
+	    List<WebElement> tagSpans = driver.findElements(By.id("tagSpan"));
+	    assertEquals(arg1, cardTitles.get(0).getText());
+	    assertEquals("#"+arg2, tagSpans.get(0).getText());
+	    
 	}
 	
 }
