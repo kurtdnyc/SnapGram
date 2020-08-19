@@ -8,12 +8,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import dev.snapgram.pages.HomePage;
 import dev.snapgram.pages.LoginPage;
 import dev.snapgram.runners.SnapGramRunner;
 import junit.framework.Assert;
 
 public class LoginPageSteps {
 	public static LoginPage loginPage = SnapGramRunner.loginPage;
+	public static HomePage homePage = SnapGramRunner.homePage;
 	public static WebDriver driver = SnapGramRunner.driver;
 	public static WebDriverWait wait = new WebDriverWait(driver, 4);
 	public static Actions actions = new Actions(driver);
@@ -62,5 +64,21 @@ public class LoginPageSteps {
 		wait.until(ExpectedConditions.titleIs("SnapGram - Register User"));
 	    Assert.assertEquals("SnapGram - Register User", driver.getTitle());
 	}
+	@When("^user clicks on the header bar$")
+	public void user_clicks_on_the_header_bar() throws Throwable {
+	    homePage.headerBar.click();
+	}
+
+	@When("^user clicks the sign out button$")
+	public void user_clicks_the_sign_out_button() throws Throwable {
+	    homePage.logoutBtn.click();
+	}
+
+	@Then("^the user should be redirected back to the login page$")
+	public void the_user_should_be_redirected_back_to_the_login_page() throws Throwable {
+		wait.until(ExpectedConditions.titleIs("SnapGram - Login"));
+	    Assert.assertEquals("SnapGram - Login", driver.getTitle());
+	}
+
 	
 }
