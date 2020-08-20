@@ -1,5 +1,6 @@
 package dev.snapgram.stepdefinitions;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -19,6 +20,8 @@ public class LoginPageSteps {
 	public static WebDriver driver = SnapGramRunner.driver;
 	public static WebDriverWait wait = new WebDriverWait(driver, 4);
 	public static Actions actions = new Actions(driver);
+	public static int numberOfTags;
+	public static int numberOfPhotos;
 	
 	@Given("^user is on login page$")
 	public void user_is_on_login_page() throws Throwable {
@@ -46,6 +49,8 @@ public class LoginPageSteps {
 	public void user_should_be_redirected_to_their_home_page() throws Throwable {
 		wait.until(ExpectedConditions.titleIs("SnapGram"));
 	    Assert.assertEquals("SnapGram", driver.getTitle());
+	    numberOfTags = driver.findElements(By.id("tagSpan")).size();
+		numberOfPhotos = driver.findElements(By.id("card-title")).size();
 	}
 
 	@Then("^user should see an alert appear$")
@@ -78,6 +83,16 @@ public class LoginPageSteps {
 	public void the_user_should_be_redirected_back_to_the_login_page() throws Throwable {
 		wait.until(ExpectedConditions.titleIs("SnapGram - Login"));
 	    Assert.assertEquals("SnapGram - Login", driver.getTitle());
+	}
+	@Then("^there will be one less photo$")
+	public void there_will_be_one_less_photo() throws Throwable {
+	    Thread.sleep(200);
+	    Assert.assertNotSame(numberOfPhotos, driver.findElements(By.id("card-title")).size());
+	}
+	@Then("^there should be one more tag$")
+	public void the_newest_photo_should_have_a_tag() throws Throwable {
+		Thread.sleep(400);
+		Assert.assertNotSame(numberOfTags, driver.findElements(By.id("tagSpan")).size());
 	}
 
 	
