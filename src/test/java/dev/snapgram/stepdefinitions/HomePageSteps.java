@@ -81,7 +81,6 @@ public class HomePageSteps {
 
 	@Then("^the add photo button should not be present$")
 	public void the_add_photo_button_should_not_be_present() throws Throwable {
-		Thread.sleep(400);
 		try {
 			System.out.println(homePage.addPhotoBtn);
 		}catch (NoSuchElementException e) {

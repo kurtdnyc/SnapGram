@@ -41,7 +41,7 @@ public class SnapGramRunner {
 		registerPage = new RegisterPage(driver);
 		addPhotoPage = new AddPhotoPage(driver);
 		homePage = new HomePage(driver);
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 	}
 	@AfterClass
 	public static void tearDown() {
