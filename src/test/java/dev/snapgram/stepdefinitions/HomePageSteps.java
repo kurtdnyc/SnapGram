@@ -9,6 +9,7 @@ import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -59,6 +60,7 @@ public class HomePageSteps {
 	@When("^types in a valid \"([^\"]*)\"$")
 	public void types_in_a_valid(String arg1) throws Throwable {
 	    homePage.lookupUser.sendKeys(arg1);
+	    homePage.lookupUser.sendKeys(Keys.ENTER);
 	}
 //	@Then("^\"([^\"]*)\" photos should appear$")
 //	public void photos_should_appear(String arg1) throws Throwable {
@@ -97,6 +99,7 @@ public class HomePageSteps {
 	@When("^clears the input$")
 	public void clears_the_input() throws Throwable {
 	    homePage.lookupUser.sendKeys("");
+	    homePage.lookupUser.sendKeys(Keys.ENTER);
 	}
 
 	@Then("^the add photo button should be present$")
@@ -159,7 +162,7 @@ public class HomePageSteps {
 		JavascriptExecutor jse2 = (JavascriptExecutor)driver;
 		jse2.executeScript("arguments[0].scrollIntoView()", homePage.savePhotoButton); 
 		Actions actions = new Actions(driver);
-		actions.moveToElement(homePage.savePhotoButton).click().build().perform();
+		actions.click(homePage.savePhotoButton).build().perform();
 	}
 
 	@When("^user clicks on the delete photo$")
