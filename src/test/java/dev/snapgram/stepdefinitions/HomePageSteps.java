@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -47,7 +48,12 @@ public class HomePageSteps {
 	
 	@When("^user clicks on user lookup button$")
 	public void user_clicks_on_user_lookup_button() throws Throwable {
-	    homePage.lookupUser.click();
+//	    homePage.lookupUser.click();
+		Thread.sleep(200);
+		JavascriptExecutor jse2 = (JavascriptExecutor)driver;
+		jse2.executeScript("arguments[0].scrollIntoView()", homePage.lookupUser); 
+		Actions actions = new Actions(driver);
+		actions.moveToElement(homePage.lookupUser).click().build().perform();
 	}
 
 	@When("^types in a valid \"([^\"]*)\"$")
@@ -149,7 +155,11 @@ public class HomePageSteps {
 
 	@When("^user clicks on the save photo button$")
 	public void user_clicks_on_the_save_photo_button() throws Throwable {
-	    homePage.savePhotoButton.click();
+		Thread.sleep(200);
+		JavascriptExecutor jse2 = (JavascriptExecutor)driver;
+		jse2.executeScript("arguments[0].scrollIntoView()", homePage.savePhotoButton); 
+		Actions actions = new Actions(driver);
+		actions.moveToElement(homePage.savePhotoButton).click().build().perform();
 	}
 
 	@When("^user clicks on the delete photo$")

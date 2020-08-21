@@ -146,3 +146,567 @@
 2020-08-21 11:36:22,168 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 97
 2020-08-21 11:36:22,492 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 98
 2020-08-21 11:36:22,509 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 99
+2020-08-21 12:02:56,480 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SnapGramSpringApplication on DESKTOP-8G708ST with PID 22652 (C:\Users\Mnaum\Desktop\SnapGram\target\classes started by Mnaum in C:\Users\Mnaum\Desktop\SnapGram)
+2020-08-21 12:02:56,483 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-21 12:02:56,552 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-21 12:02:56,553 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-21 12:02:57,211 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-21 12:02:57,284 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 63ms. Found 3 JPA repository interfaces.
+2020-08-21 12:02:58,343 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-21 12:02:58,357 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-21 12:02:58,358 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-21 12:02:58,358 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-21 12:02:58,564 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-21 12:02:58,565 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2012 ms
+2020-08-21 12:02:58,636 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'inMemoryDatabaseShutdownExecutor' defined in class path resource [org/springframework/boot/devtools/autoconfigure/DevToolsDataSourceAutoConfiguration.class]: Unsatisfied dependency expressed through method 'inMemoryDatabaseShutdownExecutor' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2020-08-21 12:02:58,640 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2020-08-21 12:02:58,665 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-08-21 12:02:58,668 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2020-08-21 12:03:24,725 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SnapGramSpringApplication on DESKTOP-8G708ST with PID 17380 (C:\Users\Mnaum\Desktop\SnapGram\target\classes started by Mnaum in C:\Users\Mnaum\Desktop\SnapGram)
+2020-08-21 12:03:24,729 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-21 12:03:24,805 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-21 12:03:24,806 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-21 12:03:25,423 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-21 12:03:25,485 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 52ms. Found 3 JPA repository interfaces.
+2020-08-21 12:03:26,502 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-21 12:03:26,512 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-21 12:03:26,512 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-21 12:03:26,512 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-21 12:03:26,696 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-21 12:03:26,697 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1891 ms
+2020-08-21 12:03:26,759 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'inMemoryDatabaseShutdownExecutor' defined in class path resource [org/springframework/boot/devtools/autoconfigure/DevToolsDataSourceAutoConfiguration.class]: Unsatisfied dependency expressed through method 'inMemoryDatabaseShutdownExecutor' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2020-08-21 12:03:26,762 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2020-08-21 12:03:26,781 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-08-21 12:03:26,784 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2020-08-21 12:03:39,291 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SnapGramSpringApplication on DESKTOP-8G708ST with PID 10596 (C:\Users\Mnaum\Desktop\SnapGram\target\classes started by Mnaum in C:\Users\Mnaum\Desktop\SnapGram)
+2020-08-21 12:03:39,294 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-21 12:03:39,359 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-21 12:03:39,359 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-21 12:03:39,992 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-21 12:03:40,056 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 55ms. Found 3 JPA repository interfaces.
+2020-08-21 12:03:41,029 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-21 12:03:41,042 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-21 12:03:41,043 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-21 12:03:41,043 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-21 12:03:41,219 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-21 12:03:41,219 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1859 ms
+2020-08-21 12:03:41,293 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'inMemoryDatabaseShutdownExecutor' defined in class path resource [org/springframework/boot/devtools/autoconfigure/DevToolsDataSourceAutoConfiguration.class]: Unsatisfied dependency expressed through method 'inMemoryDatabaseShutdownExecutor' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2020-08-21 12:03:41,296 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2020-08-21 12:03:41,321 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-08-21 12:03:41,324 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2020-08-21 12:04:26,538 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SnapGramSpringApplication on DESKTOP-8G708ST with PID 20856 (C:\Users\Mnaum\Desktop\SnapGram\target\classes started by Mnaum in C:\Users\Mnaum\Desktop\SnapGram)
+2020-08-21 12:04:26,541 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-21 12:04:26,604 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-21 12:04:26,605 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-21 12:04:27,180 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-21 12:04:27,229 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 42ms. Found 3 JPA repository interfaces.
+2020-08-21 12:04:28,194 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-21 12:04:28,205 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-21 12:04:28,206 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-21 12:04:28,207 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-21 12:04:28,383 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-21 12:04:28,383 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1778 ms
+2020-08-21 12:04:28,455 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'inMemoryDatabaseShutdownExecutor' defined in class path resource [org/springframework/boot/devtools/autoconfigure/DevToolsDataSourceAutoConfiguration.class]: Unsatisfied dependency expressed through method 'inMemoryDatabaseShutdownExecutor' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2020-08-21 12:04:28,459 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2020-08-21 12:04:28,482 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-08-21 12:04:28,486 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2020-08-21 12:04:57,492 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SnapGramSpringApplication on DESKTOP-8G708ST with PID 372 (C:\Users\Mnaum\Desktop\SnapGram\target\classes started by Mnaum in C:\Users\Mnaum\Desktop\SnapGram)
+2020-08-21 12:04:57,496 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-21 12:04:57,572 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-21 12:04:57,573 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-21 12:04:58,233 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-21 12:04:58,300 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 56ms. Found 3 JPA repository interfaces.
+2020-08-21 12:04:59,339 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-21 12:04:59,348 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-21 12:04:59,349 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-21 12:04:59,349 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-21 12:04:59,571 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-21 12:04:59,572 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1999 ms
+2020-08-21 12:04:59,635 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'inMemoryDatabaseShutdownExecutor' defined in class path resource [org/springframework/boot/devtools/autoconfigure/DevToolsDataSourceAutoConfiguration.class]: Unsatisfied dependency expressed through method 'inMemoryDatabaseShutdownExecutor' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2020-08-21 12:04:59,639 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2020-08-21 12:04:59,664 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-08-21 12:04:59,667 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2020-08-21 12:07:07,480 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SnapGramSpringApplication on DESKTOP-8G708ST with PID 9576 (C:\Users\Mnaum\Desktop\SnapGram\target\classes started by Mnaum in C:\Users\Mnaum\Desktop\SnapGram)
+2020-08-21 12:07:07,484 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-21 12:07:07,554 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-21 12:07:07,554 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-21 12:07:08,189 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-21 12:07:08,247 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 49ms. Found 3 JPA repository interfaces.
+2020-08-21 12:07:09,322 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-21 12:07:09,339 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-21 12:07:09,340 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-21 12:07:09,341 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-21 12:07:09,607 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-21 12:07:09,608 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2054 ms
+2020-08-21 12:07:09,834 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-08-21 12:07:10,164 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-08-21 12:07:10,210 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-21 12:07:10,286 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-08-21 12:07:10,445 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-21 12:07:10,567 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2020-08-21 12:07:11,418 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-21 12:07:11,427 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-21 12:07:12,878 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-21 12:07:13,081 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-21 12:07:13,421 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-08-21 12:07:13,435 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2020-08-21 12:07:13,464 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-21 12:07:13,478 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SnapGramSpringApplication in 6.357 seconds (JVM running for 7.272)
+2020-08-21 12:07:13,483 INFO dev.snapgram.app.SnapGramSpringApplication [restartedMain] SnapGram application started successfully.
+2020-08-21 12:07:31,081 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-5] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-21 12:07:31,082 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-5] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-21 12:07:31,085 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown initiated...
+2020-08-21 12:07:31,122 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown completed.
+2020-08-21 12:07:31,215 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SnapGramSpringApplication on DESKTOP-8G708ST with PID 9576 (C:\Users\Mnaum\Desktop\SnapGram\target\classes started by Mnaum in C:\Users\Mnaum\Desktop\SnapGram)
+2020-08-21 12:07:31,216 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-21 12:07:31,440 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-21 12:07:31,460 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 19ms. Found 3 JPA repository interfaces.
+2020-08-21 12:07:31,625 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-21 12:07:31,626 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-21 12:07:31,626 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-21 12:07:31,627 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-21 12:07:31,690 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-21 12:07:31,690 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 470 ms
+2020-08-21 12:07:31,736 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2020-08-21 12:07:31,970 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2020-08-21 12:07:31,974 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-21 12:07:31,983 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2020-08-21 12:07:32,107 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-21 12:07:32,108 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-21 12:07:32,256 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-21 12:07:32,307 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-21 12:07:32,413 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-08-21 12:07:32,422 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2020-08-21 12:07:32,426 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-21 12:07:32,432 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SnapGramSpringApplication in 1.263 seconds (JVM running for 26.227)
+2020-08-21 12:07:32,435 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2020-08-21 12:07:32,435 INFO dev.snapgram.app.SnapGramSpringApplication [restartedMain] SnapGram application started successfully.
+2020-08-21 12:08:03,596 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SnapGramSpringApplication on DESKTOP-8G708ST with PID 21108 (C:\Users\Mnaum\Desktop\SnapGram\target\classes started by Mnaum in C:\Users\Mnaum\Desktop\SnapGram)
+2020-08-21 12:08:03,599 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-21 12:08:03,659 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-21 12:08:03,660 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-21 12:08:04,287 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-21 12:08:04,343 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 48ms. Found 3 JPA repository interfaces.
+2020-08-21 12:08:05,334 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-21 12:08:05,343 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-21 12:08:05,344 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-21 12:08:05,344 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-21 12:08:05,560 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-21 12:08:05,560 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1900 ms
+2020-08-21 12:08:05,748 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-08-21 12:08:06,087 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-08-21 12:08:06,157 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-21 12:08:06,234 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-08-21 12:08:06,378 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-21 12:08:06,506 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2020-08-21 12:08:07,137 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-21 12:08:07,145 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-21 12:08:08,172 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-21 12:08:08,307 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-21 12:08:08,587 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-08-21 12:08:08,598 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2020-08-21 12:08:08,622 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-21 12:08:08,632 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SnapGramSpringApplication in 5.429 seconds (JVM running for 6.364)
+2020-08-21 12:08:08,635 INFO dev.snapgram.app.SnapGramSpringApplication [restartedMain] SnapGram application started successfully.
+2020-08-21 12:08:30,285 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-21 12:08:30,286 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-08-21 12:08:30,296 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 10 ms
+2020-08-21 12:08:30,384 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 1
+2020-08-21 12:08:30,891 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 2
+2020-08-21 12:08:32,400 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 3
+2020-08-21 12:08:32,400 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 3
+2020-08-21 12:08:32,946 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 4
+2020-08-21 12:08:33,115 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 5
+2020-08-21 12:08:34,242 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 6
+2020-08-21 12:08:34,899 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 7
+2020-08-21 12:08:35,036 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 8
+2020-08-21 12:08:36,245 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 9
+2020-08-21 12:08:36,247 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 10
+2020-08-21 12:08:37,101 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 11
+2020-08-21 12:08:37,269 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 12
+2020-08-21 12:08:38,650 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 13
+2020-08-21 12:08:39,151 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 14
+2020-08-21 12:08:39,253 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 15
+2020-08-21 12:08:42,408 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 16
+2020-08-21 12:08:42,616 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 17
+2020-08-21 12:08:44,154 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-4] Total HTTP calls: 18
+2020-08-21 12:08:45,161 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 19
+2020-08-21 12:08:46,219 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 20
+2020-08-21 12:08:46,292 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 21
+2020-08-21 12:08:47,227 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 22
+2020-08-21 12:08:48,219 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 23
+2020-08-21 12:08:48,390 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 24
+2020-08-21 12:08:49,569 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 25
+2020-08-21 12:08:49,731 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 26
+2020-08-21 12:08:50,982 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-4] Total HTTP calls: 27
+2020-08-21 12:08:51,147 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 28
+2020-08-21 12:08:53,049 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 29
+2020-08-21 12:08:53,219 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 30
+2020-08-21 12:08:55,715 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 31
+2020-08-21 12:08:55,718 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-8] File upload in progress.
+2020-08-21 12:08:55,721 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-8] Uploading file with name= frodoAndSam.jfif
+2020-08-21 12:08:56,370 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-8] File upload is completed.
+2020-08-21 12:08:56,381 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 32
+2020-08-21 12:08:56,715 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 33
+2020-08-21 12:08:57,433 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 34
+2020-08-21 12:08:57,636 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 35
+2020-08-21 12:09:01,988 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-4] Total HTTP calls: 36
+2020-08-21 12:09:01,989 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-4] File upload in progress.
+2020-08-21 12:09:01,992 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-4] Uploading file with name= pencil.jfif
+2020-08-21 12:09:02,087 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-4] File upload is completed.
+2020-08-21 12:09:02,094 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 37
+2020-08-21 12:09:02,474 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 38
+2020-08-21 12:09:02,474 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 38
+2020-08-21 12:09:02,491 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 39
+2020-08-21 12:09:03,491 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 40
+2020-08-21 12:09:03,780 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 41
+2020-08-21 12:09:05,885 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 42
+2020-08-21 12:09:05,886 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-3] File upload in progress.
+2020-08-21 12:09:05,887 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-3] Uploading file with name= frodoAndSam.jfif
+2020-08-21 12:09:06,083 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-3] File upload is completed.
+2020-08-21 12:09:06,090 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-4] Total HTTP calls: 43
+2020-08-21 12:09:06,517 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 44
+2020-08-21 12:09:06,529 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 45
+2020-08-21 12:43:31,647 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 46
+2020-08-21 12:43:31,885 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 47
+2020-08-21 12:43:33,516 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 48
+2020-08-21 12:43:33,517 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 49
+2020-08-21 12:43:34,067 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 50
+2020-08-21 12:43:34,246 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 51
+2020-08-21 12:43:35,380 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 52
+2020-08-21 12:43:36,053 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 53
+2020-08-21 12:43:36,207 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 54
+2020-08-21 12:43:38,902 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-4] Total HTTP calls: 55
+2020-08-21 12:43:39,075 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 56
+2020-08-21 12:43:41,901 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 57
+2020-08-21 12:43:42,034 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 58
+2020-08-21 12:43:45,228 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 59
+2020-08-21 12:43:45,433 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 60
+2020-08-21 12:43:47,134 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 61
+2020-08-21 12:43:47,217 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 62
+2020-08-21 12:43:48,249 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 63
+2020-08-21 12:43:48,329 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-4] Total HTTP calls: 64
+2020-08-21 12:43:49,384 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 65
+2020-08-21 12:43:49,462 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 66
+2020-08-21 12:43:50,560 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 67
+2020-08-21 12:43:51,605 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 68
+2020-08-21 12:43:51,793 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 69
+2020-08-21 12:43:52,978 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 70
+2020-08-21 12:43:53,171 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 71
+2020-08-21 12:43:55,468 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 72
+2020-08-21 12:43:55,658 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 73
+2020-08-21 12:43:56,102 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-4] Total HTTP calls: 74
+2020-08-21 12:43:56,110 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 75
+2020-08-21 12:43:56,124 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 76
+2020-08-21 12:43:56,134 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 77
+2020-08-21 12:43:56,145 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 78
+2020-08-21 12:43:56,151 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 79
+2020-08-21 12:43:56,294 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 80
+2020-08-21 12:43:58,063 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 81
+2020-08-21 12:43:58,236 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 82
+2020-08-21 12:44:00,724 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 83
+2020-08-21 12:44:00,725 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-3] File upload in progress.
+2020-08-21 12:44:00,727 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-3] Uploading file with name= frodoAndSam.jfif
+2020-08-21 12:44:01,031 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-3] File upload is completed.
+2020-08-21 12:44:01,040 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 84
+2020-08-21 12:44:01,398 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 85
+2020-08-21 12:44:02,218 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 86
+2020-08-21 12:44:02,426 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 87
+2020-08-21 12:44:06,794 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 88
+2020-08-21 12:44:06,795 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-8] File upload in progress.
+2020-08-21 12:44:06,797 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-8] Uploading file with name= pencil.jfif
+2020-08-21 12:44:06,906 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-8] File upload is completed.
+2020-08-21 12:44:06,913 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 89
+2020-08-21 12:44:07,251 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 90
+2020-08-21 12:44:07,251 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-4] Total HTTP calls: 90
+2020-08-21 12:44:07,266 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 91
+2020-08-21 12:44:08,114 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 92
+2020-08-21 12:44:08,352 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 93
+2020-08-21 12:44:10,437 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 94
+2020-08-21 12:44:10,438 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-6] File upload in progress.
+2020-08-21 12:44:10,440 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-6] Uploading file with name= frodoAndSam.jfif
+2020-08-21 12:44:10,530 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-6] File upload is completed.
+2020-08-21 12:44:10,537 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 95
+2020-08-21 12:44:10,873 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 96
+2020-08-21 12:44:10,888 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 97
+2020-08-21 12:58:17,323 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SnapGramSpringApplication on DESKTOP-8G708ST with PID 20516 (C:\Users\Mnaum\Desktop\SnapGram\target\classes started by Mnaum in C:\Users\Mnaum\Desktop\SnapGram)
+2020-08-21 12:58:17,327 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-21 12:58:17,427 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-21 12:58:17,427 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-21 12:58:18,185 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-21 12:58:18,244 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 49ms. Found 3 JPA repository interfaces.
+2020-08-21 12:58:19,522 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-21 12:58:19,536 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-21 12:58:19,537 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-21 12:58:19,537 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-21 12:58:19,783 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-21 12:58:19,783 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2355 ms
+2020-08-21 12:58:20,022 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-08-21 12:58:20,368 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-08-21 12:58:20,441 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-21 12:58:20,541 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-08-21 12:58:20,735 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-21 12:58:20,870 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2020-08-21 12:58:21,609 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-21 12:58:21,620 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-21 12:58:22,862 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-21 12:58:23,032 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-21 12:58:23,365 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-08-21 12:58:23,379 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2020-08-21 12:58:23,415 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-21 12:58:23,438 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SnapGramSpringApplication in 6.545 seconds (JVM running for 7.677)
+2020-08-21 12:58:23,444 INFO dev.snapgram.app.SnapGramSpringApplication [restartedMain] SnapGram application started successfully.
+2020-08-21 13:00:38,046 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-21 13:00:38,047 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-08-21 13:00:38,055 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 7 ms
+2020-08-21 13:00:38,175 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 1
+2020-08-21 13:00:38,766 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 2
+2020-08-21 13:00:40,384 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 3
+2020-08-21 13:00:40,384 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 3
+2020-08-21 13:00:41,081 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 4
+2020-08-21 13:00:41,266 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 5
+2020-08-21 13:00:42,447 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 6
+2020-08-21 13:00:43,151 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 7
+2020-08-21 13:00:43,294 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 8
+2020-08-21 13:00:44,487 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 9
+2020-08-21 13:00:44,489 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 10
+2020-08-21 13:00:45,396 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 11
+2020-08-21 13:00:45,575 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 12
+2020-08-21 13:00:47,023 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 13
+2020-08-21 13:00:47,589 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 14
+2020-08-21 13:00:47,691 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 15
+2020-08-21 13:00:50,896 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 16
+2020-08-21 13:00:51,109 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 17
+2020-08-21 13:00:52,789 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-4] Total HTTP calls: 18
+2020-08-21 13:00:52,869 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 19
+2020-08-21 13:00:53,914 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 20
+2020-08-21 13:00:53,990 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 21
+2020-08-21 13:00:55,042 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 22
+2020-08-21 13:00:55,123 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 23
+2020-08-21 13:00:56,179 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 24
+2020-08-21 13:00:57,302 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 25
+2020-08-21 13:00:57,505 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 26
+2020-08-21 13:00:58,737 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-4] Total HTTP calls: 27
+2020-08-21 13:00:58,928 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 28
+2020-08-21 13:01:00,251 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 29
+2020-08-21 13:01:00,433 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 30
+2020-08-21 13:01:02,395 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 31
+2020-08-21 13:01:02,577 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 32
+2020-08-21 13:01:05,100 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 33
+2020-08-21 13:01:05,108 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-9] File upload in progress.
+2020-08-21 13:01:05,111 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-9] Uploading file with name= frodoAndSam.jfif
+2020-08-21 13:01:05,771 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-9] File upload is completed.
+2020-08-21 13:01:05,796 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 34
+2020-08-21 13:01:06,140 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 35
+2020-08-21 13:01:07,125 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-4] Total HTTP calls: 36
+2020-08-21 13:01:07,348 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 37
+2020-08-21 13:01:12,148 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 38
+2020-08-21 13:01:12,150 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-5] File upload in progress.
+2020-08-21 13:01:12,153 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-5] Uploading file with name= pencil.jfif
+2020-08-21 13:01:12,292 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-5] File upload is completed.
+2020-08-21 13:01:12,298 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 39
+2020-08-21 13:01:12,641 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 40
+2020-08-21 13:01:12,641 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 41
+2020-08-21 13:01:12,656 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 42
+2020-08-21 13:01:13,877 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 43
+2020-08-21 13:01:14,139 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-4] Total HTTP calls: 44
+2020-08-21 13:01:16,691 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 45
+2020-08-21 13:01:16,692 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-7] File upload in progress.
+2020-08-21 13:01:16,695 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-7] Uploading file with name= frodoAndSam.jfif
+2020-08-21 13:01:16,874 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-7] File upload is completed.
+2020-08-21 13:01:16,881 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 46
+2020-08-21 13:01:17,210 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 47
+2020-08-21 13:01:17,223 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 48
+2020-08-21 13:02:55,821 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SnapGramSpringApplication on DESKTOP-8G708ST with PID 2568 (C:\Users\Mnaum\Desktop\SnapGram\target\classes started by Mnaum in C:\Users\Mnaum\Desktop\SnapGram)
+2020-08-21 13:02:55,824 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-21 13:02:55,912 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-21 13:02:55,913 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-21 13:02:56,633 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-21 13:02:56,695 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 52ms. Found 3 JPA repository interfaces.
+2020-08-21 13:02:57,949 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-21 13:02:57,965 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-21 13:02:57,965 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-21 13:02:57,966 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-21 13:02:58,167 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-21 13:02:58,167 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2254 ms
+2020-08-21 13:02:58,405 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-08-21 13:02:58,771 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-08-21 13:02:58,838 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-21 13:02:58,929 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-08-21 13:02:59,080 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-21 13:02:59,214 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2020-08-21 13:02:59,937 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-21 13:02:59,949 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-21 13:03:01,200 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-21 13:03:01,376 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-21 13:03:01,741 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-08-21 13:03:01,755 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2020-08-21 13:03:01,791 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-21 13:03:01,808 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SnapGramSpringApplication in 6.418 seconds (JVM running for 7.453)
+2020-08-21 13:03:01,812 INFO dev.snapgram.app.SnapGramSpringApplication [restartedMain] SnapGram application started successfully.
+2020-08-21 13:04:11,392 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-21 13:04:11,393 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-08-21 13:04:11,405 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 12 ms
+2020-08-21 13:04:11,516 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 1
+2020-08-21 13:04:12,191 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 2
+2020-08-21 13:04:13,982 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 3
+2020-08-21 13:04:13,982 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 4
+2020-08-21 13:04:14,573 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 5
+2020-08-21 13:04:14,748 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 6
+2020-08-21 13:04:15,892 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 7
+2020-08-21 13:04:16,581 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 8
+2020-08-21 13:04:16,721 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 9
+2020-08-21 13:04:18,236 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-4] Total HTTP calls: 10
+2020-08-21 13:04:18,238 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 11
+2020-08-21 13:04:19,140 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 12
+2020-08-21 13:04:19,315 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 13
+2020-08-21 13:04:21,087 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 14
+2020-08-21 13:04:21,692 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 15
+2020-08-21 13:04:21,798 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 16
+2020-08-21 13:04:25,013 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 17
+2020-08-21 13:04:25,218 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 18
+2020-08-21 13:04:26,833 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 19
+2020-08-21 13:04:26,916 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-4] Total HTTP calls: 20
+2020-08-21 13:04:27,932 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 21
+2020-08-21 13:04:28,004 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 22
+2020-08-21 13:04:28,997 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 23
+2020-08-21 13:04:29,070 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 24
+2020-08-21 13:04:30,136 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 25
+2020-08-21 13:04:31,224 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 26
+2020-08-21 13:04:31,395 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 27
+2020-08-21 13:04:32,674 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 28
+2020-08-21 13:04:32,839 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 29
+2020-08-21 13:04:34,212 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-4] Total HTTP calls: 30
+2020-08-21 13:04:34,398 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 31
+2020-08-21 13:04:35,203 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 32
+2020-08-21 13:04:35,209 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 33
+2020-08-21 13:04:35,218 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 34
+2020-08-21 13:04:35,226 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 35
+2020-08-21 13:04:35,234 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 36
+2020-08-21 13:04:35,240 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 37
+2020-08-21 13:04:35,378 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 38
+2020-08-21 13:04:37,590 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 39
+2020-08-21 13:04:37,755 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-4] Total HTTP calls: 40
+2020-08-21 13:04:40,291 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 41
+2020-08-21 13:04:40,298 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-5] File upload in progress.
+2020-08-21 13:04:40,301 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-5] Uploading file with name= frodoAndSam.jfif
+2020-08-21 13:04:40,893 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-5] File upload is completed.
+2020-08-21 13:04:40,909 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 42
+2020-08-21 13:04:41,245 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 43
+2020-08-21 13:04:41,982 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 44
+2020-08-21 13:04:42,204 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 45
+2020-08-21 13:04:46,902 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 46
+2020-08-21 13:04:46,903 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-2] File upload in progress.
+2020-08-21 13:04:46,906 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-2] Uploading file with name= pencil.jfif
+2020-08-21 13:04:47,017 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-2] File upload is completed.
+2020-08-21 13:04:47,025 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 47
+2020-08-21 13:04:47,351 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 48
+2020-08-21 13:04:47,351 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 48
+2020-08-21 13:04:47,367 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 49
+2020-08-21 13:04:48,242 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 50
+2020-08-21 13:04:48,476 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 51
+2020-08-21 13:04:50,641 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 52
+2020-08-21 13:04:50,642 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-1] File upload in progress.
+2020-08-21 13:04:50,643 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-1] Uploading file with name= frodoAndSam.jfif
+2020-08-21 13:04:50,752 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-1] File upload is completed.
+2020-08-21 13:04:50,758 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 53
