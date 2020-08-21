@@ -27,7 +27,10 @@ public class LoginPageSteps {
 	public void user_is_on_login_page() throws Throwable {
 	    driver.get("http://localhost:4200/login");
 	}
-
+	@When("^user clicks on sign up button$")
+	public void user_clicks_on_sign_up_button() throws Throwable {
+	    loginPage.registerUserBtn.click();
+	}
 	@When("^user enters \"([^\"]*)\" into username field$")
 	public void user_enters_into_username_field(String arg1) throws Throwable {
 		loginPage.username.click();
@@ -64,11 +67,6 @@ public class LoginPageSteps {
 	    loginPage.registerUserBtn.click();
 	}
 
-	@Then("^the user should be redirected to the reimbursement page$")
-	public void the_user_should_be_redirected_to_the_reimbursement_page() throws Throwable {
-		wait.until(ExpectedConditions.titleIs("SnapGram - Register User"));
-	    Assert.assertEquals("SnapGram - Register User", driver.getTitle());
-	}
 	@When("^user clicks on the header bar$")
 	public void user_clicks_on_the_header_bar() throws Throwable {
 	    homePage.headerBar.click();

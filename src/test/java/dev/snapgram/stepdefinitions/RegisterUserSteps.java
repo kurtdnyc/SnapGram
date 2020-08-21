@@ -19,12 +19,11 @@ public class RegisterUserSteps {
 	public static WebDriverWait wait = new WebDriverWait(driver, 4);
 	public static Actions actions = new Actions(driver);
 	
-	@Given("^user is on register user page$")
+	@Then("^user is on register user page$")
 	public void user_is_on_register_user_page() throws Throwable {
-	    driver.get("http://localhost:4200/register");
-	    wait.until(ExpectedConditions.titleIs("SnapGram - Register User"));
+		wait.until(ExpectedConditions.titleIs("SnapGram - Register User"));
+		Assert.assertEquals("SnapGram - Register User", driver.getTitle());
 	}
-
 	@When("^user enters \"([^\"]*)\" into the new username field$")
 	public void user_enters_into_the_new_username_field(String arg1) throws Throwable {
 		registerPage.newUsername.click();
@@ -52,7 +51,10 @@ public class RegisterUserSteps {
 	public void clicks_on_the_submit_new_user_button() throws Throwable {
 	    registerPage.submitNewUserBtn.click();
 	}
-
+	@When("^clicks on the sign in button$")
+	public void clicks_on_the_sign_in_button() throws Throwable {
+	    registerPage.signInBtn.click();
+	}
 	@Then("^user should be redirect to login page$")
 	public void user_should_be_redirect_to_login_page() throws Throwable {
 		wait.until(ExpectedConditions.titleIs("SnapGram - Login"));

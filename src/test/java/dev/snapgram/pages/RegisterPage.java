@@ -1,5 +1,7 @@
 package dev.snapgram.pages;
 
+import javax.persistence.Id;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,8 +23,9 @@ public class RegisterPage {
 	public WebElement newFirstName;
 	@FindBy(id = "new_lname_input")
 	public WebElement newLastName;
-	@FindBy(id = "submit_new_user")
+	@FindBy(id = "create_user_btn")
 	public WebElement submitNewUserBtn;
-	
+	@FindBy(id = "sign_in_btn")
+	public WebElement signInBtn;
 	
 }

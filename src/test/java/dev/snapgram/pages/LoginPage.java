@@ -19,7 +19,7 @@ public class LoginPage {
 	public WebElement password;
 	@FindBy(id = "login_btn")
 	public WebElement loginBtn;
-	@FindBy(id = "register_user_btn")
+	@FindBy(id = "register_btn")
 	public WebElement registerUserBtn;
 
 }
