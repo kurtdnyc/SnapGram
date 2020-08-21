@@ -1,0 +1,148 @@
+2020-08-21 11:31:11,689 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SnapGramSpringApplication on DESKTOP-8G708ST with PID 20560 (C:\Users\Mnaum\Desktop\SnapGram\target\classes started by Mnaum in C:\Users\Mnaum\Desktop\SnapGram)
+2020-08-21 11:31:11,693 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-21 11:31:11,768 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-21 11:31:11,768 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-21 11:31:12,600 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-21 11:31:12,671 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 59ms. Found 3 JPA repository interfaces.
+2020-08-21 11:31:14,055 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-21 11:31:14,072 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-21 11:31:14,073 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-21 11:31:14,073 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-21 11:31:14,369 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-21 11:31:14,370 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2601 ms
+2020-08-21 11:31:14,676 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-08-21 11:31:15,057 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-08-21 11:31:15,131 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-21 11:31:15,235 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-08-21 11:31:15,413 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-21 11:31:15,569 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2020-08-21 11:31:16,385 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-21 11:31:16,393 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-21 11:31:17,817 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-21 11:31:18,013 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-21 11:31:18,410 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-08-21 11:31:18,426 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2020-08-21 11:31:18,463 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-21 11:31:18,480 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SnapGramSpringApplication in 7.245 seconds (JVM running for 8.375)
+2020-08-21 11:31:18,484 INFO dev.snapgram.app.SnapGramSpringApplication [restartedMain] SnapGram application started successfully.
+2020-08-21 11:31:36,293 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-21 11:31:36,294 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-08-21 11:31:36,308 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 14 ms
+2020-08-21 11:31:36,490 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 1
+2020-08-21 11:31:37,513 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 2
+2020-08-21 11:31:39,173 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 3
+2020-08-21 11:31:39,173 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 3
+2020-08-21 11:31:39,964 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 4
+2020-08-21 11:31:40,188 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 5
+2020-08-21 11:31:41,346 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 6
+2020-08-21 11:31:42,160 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 7
+2020-08-21 11:31:42,331 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 8
+2020-08-21 11:31:45,131 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-4] Total HTTP calls: 9
+2020-08-21 11:31:45,316 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 10
+2020-08-21 11:31:48,352 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 11
+2020-08-21 11:31:48,546 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 12
+2020-08-21 11:31:51,745 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 13
+2020-08-21 11:31:51,952 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 14
+2020-08-21 11:31:53,841 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 15
+2020-08-21 11:31:53,929 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 16
+2020-08-21 11:31:55,160 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 17
+2020-08-21 11:31:55,243 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-4] Total HTTP calls: 18
+2020-08-21 11:31:56,486 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 19
+2020-08-21 11:31:56,573 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 20
+2020-08-21 11:31:57,809 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 21
+2020-08-21 11:31:59,008 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 22
+2020-08-21 11:31:59,202 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 23
+2020-08-21 11:32:00,585 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 24
+2020-08-21 11:32:00,769 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 25
+2020-08-21 11:32:03,268 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 26
+2020-08-21 11:32:03,467 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 27
+2020-08-21 11:32:03,923 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-4] Total HTTP calls: 28
+2020-08-21 11:32:03,939 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 29
+2020-08-21 11:32:03,950 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 30
+2020-08-21 11:32:03,956 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 31
+2020-08-21 11:32:03,966 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 32
+2020-08-21 11:32:03,972 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 33
+2020-08-21 11:32:04,125 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 34
+2020-08-21 11:32:06,128 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 35
+2020-08-21 11:32:06,322 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 36
+2020-08-21 11:32:08,868 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 37
+2020-08-21 11:32:08,876 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-3] File upload in progress.
+2020-08-21 11:32:08,881 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-3] Uploading file with name= frodoAndSam.jfif
+2020-08-21 11:32:09,595 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-3] File upload is completed.
+2020-08-21 11:32:09,612 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 38
+2020-08-21 11:32:09,953 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 39
+2020-08-21 11:32:10,913 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 40
+2020-08-21 11:32:11,126 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 41
+2020-08-21 11:32:12,332 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 42
+2020-08-21 11:32:12,333 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-9] File upload in progress.
+2020-08-21 11:32:12,335 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-9] Uploading file with name= pencil.jfif
+2020-08-21 11:32:12,436 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-9] File upload is completed.
+2020-08-21 11:32:12,443 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 43
+2020-08-21 11:32:12,784 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 44
+2020-08-21 11:32:13,714 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 45
+2020-08-21 11:32:13,947 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 46
+2020-08-21 11:32:19,333 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-4] Total HTTP calls: 47
+2020-08-21 11:32:19,335 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-4] File upload in progress.
+2020-08-21 11:32:19,337 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-4] Uploading file with name= frodoAndSam.jfif
+2020-08-21 11:32:19,448 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-4] File upload is completed.
+2020-08-21 11:32:19,456 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 48
+2020-08-21 11:32:19,777 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 49
+2020-08-21 11:32:19,793 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 50
+2020-08-21 11:35:43,370 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 51
+2020-08-21 11:35:43,602 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 52
+2020-08-21 11:35:45,147 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 53
+2020-08-21 11:35:45,147 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 54
+2020-08-21 11:35:45,820 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 55
+2020-08-21 11:35:46,012 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 56
+2020-08-21 11:35:47,231 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-4] Total HTTP calls: 57
+2020-08-21 11:35:48,083 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 58
+2020-08-21 11:35:48,261 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 59
+2020-08-21 11:35:49,459 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 60
+2020-08-21 11:35:49,461 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 61
+2020-08-21 11:35:50,466 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 62
+2020-08-21 11:35:50,648 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 63
+2020-08-21 11:35:52,137 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 64
+2020-08-21 11:35:52,748 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 65
+2020-08-21 11:35:52,892 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-4] Total HTTP calls: 66
+2020-08-21 11:35:56,085 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 67
+2020-08-21 11:35:56,280 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 68
+2020-08-21 11:35:58,114 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 69
+2020-08-21 11:35:58,197 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 70
+2020-08-21 11:35:59,302 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 71
+2020-08-21 11:35:59,375 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 72
+2020-08-21 11:36:00,444 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 73
+2020-08-21 11:36:00,518 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 74
+2020-08-21 11:36:01,604 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-4] Total HTTP calls: 75
+2020-08-21 11:36:02,738 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 76
+2020-08-21 11:36:02,932 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 77
+2020-08-21 11:36:04,220 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 78
+2020-08-21 11:36:04,412 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 79
+2020-08-21 11:36:05,807 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 80
+2020-08-21 11:36:05,975 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 81
+2020-08-21 11:36:07,960 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 82
+2020-08-21 11:36:08,143 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 83
+2020-08-21 11:36:10,679 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 84
+2020-08-21 11:36:10,680 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-9] File upload in progress.
+2020-08-21 11:36:10,682 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-9] Uploading file with name= frodoAndSam.jfif
+2020-08-21 11:36:10,958 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-9] File upload is completed.
+2020-08-21 11:36:10,965 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 85
+2020-08-21 11:36:11,313 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 86
+2020-08-21 11:36:12,251 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 87
+2020-08-21 11:36:12,460 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 88
+2020-08-21 11:36:17,606 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 89
+2020-08-21 11:36:17,606 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-6] File upload in progress.
+2020-08-21 11:36:17,608 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-6] Uploading file with name= pencil.jfif
+2020-08-21 11:36:17,706 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-6] File upload is completed.
+2020-08-21 11:36:17,714 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-3] Total HTTP calls: 90
+2020-08-21 11:36:18,042 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-9] Total HTTP calls: 91
+2020-08-21 11:36:18,042 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-4] Total HTTP calls: 92
+2020-08-21 11:36:18,059 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-8] Total HTTP calls: 93
+2020-08-21 11:36:19,415 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-5] Total HTTP calls: 94
+2020-08-21 11:36:19,657 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-7] Total HTTP calls: 95
+2020-08-21 11:36:21,995 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-2] Total HTTP calls: 96
+2020-08-21 11:36:21,997 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-2] File upload in progress.
+2020-08-21 11:36:22,001 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-2] Uploading file with name= frodoAndSam.jfif
+2020-08-21 11:36:22,156 INFO dev.snapgram.services.AWSS3ServiceImpl [http-nio-8080-exec-2] File upload is completed.
+2020-08-21 11:36:22,168 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-6] Total HTTP calls: 97
+2020-08-21 11:36:22,492 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-10] Total HTTP calls: 98
+2020-08-21 11:36:22,509 INFO dev.snapgram.aspects.LoggingAspect [http-nio-8080-exec-1] Total HTTP calls: 99

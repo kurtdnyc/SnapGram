@@ -8,24 +8,26 @@ import org.openqa.selenium.support.PageFactory;
 public class AddPhotoPage {
 
 	WebDriver driver;
-	
+
 	public AddPhotoPage(WebDriver driver) {
 		this.driver = driver;
-		PageFactory.initElements(driver, AddPhotoPage.class);
+		PageFactory.initElements(driver, this);
 	}
 	
 	//Placeholder element ids below
 	
 	@FindBy(id = "photo_link_input")
 	public WebElement photoLinkField;
-	@FindBy(id = "photo_name_input")
+	@FindBy(id = "photoName")
 	public WebElement photoNameField;
-	@FindBy(id = "caption_input")
+	@FindBy(id = "photoDescription")
 	public WebElement captionField;
-	@FindBy(id = "tag_input")
+	@FindBy(id = "addTag")
 	public WebElement tagsField;
-	@FindBy(id = "upload_btn")
+	@FindBy(id = "photoUploadImage")
 	public WebElement uploadPhotoBtn;
-	@FindBy(id = "save_btn")
+	@FindBy(id = "savePhotoButton")
 	public WebElement savePhotoBtn;
+	@FindBy(id = "addTagButton")
+	public WebElement addTagBtn;
 }
