@@ -14,5 +14,5 @@ Scenario Outline: User enters valid credentials and is redirected
 	
 	Examples: 
 		|username|password|
-		|datemike34|worldsbestboss|
+		|eSmith22|runEmmitt|
 		|matt1992|bestPassEva|

@@ -51,7 +51,7 @@ public class HomePage {
 	public WebElement imageNameField;
 	@FindBy(id = "photoDescription")
 	public WebElement imageDescriptionField;
-	@FindBy(id = "card-title")
+	@FindBy(id = "image-title")
 	public WebElement firstImageTitle;
 	@FindBy(id = "tagSpan")
 	public WebElement firstTag;

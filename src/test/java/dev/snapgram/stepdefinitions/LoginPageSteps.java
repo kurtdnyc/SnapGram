@@ -53,7 +53,7 @@ public class LoginPageSteps {
 		wait.until(ExpectedConditions.titleIs("SnapGram"));
 	    Assert.assertEquals("SnapGram", driver.getTitle());
 	    numberOfTags = driver.findElements(By.id("tagSpan")).size();
-		numberOfPhotos = driver.findElements(By.id("card-title")).size();
+		numberOfPhotos = driver.findElements(By.className("card-tile")).size();
 	}
 
 	@Then("^user should see an alert appear$")
@@ -85,7 +85,7 @@ public class LoginPageSteps {
 	@Then("^there will be one less photo$")
 	public void there_will_be_one_less_photo() throws Throwable {
 	    Thread.sleep(200);
-	    Assert.assertNotSame(numberOfPhotos, driver.findElements(By.id("card-title")).size());
+	    Assert.assertNotSame(numberOfPhotos, driver.findElements(By.className("card-tile")).size());
 	}
 	@Then("^there should be one more tag$")
 	public void the_newest_photo_should_have_a_tag() throws Throwable {

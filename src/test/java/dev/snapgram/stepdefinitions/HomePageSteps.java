@@ -120,13 +120,13 @@ public class HomePageSteps {
 	@When("^types in tag name$")
 	public void types_in_tag_name() throws Throwable {
 		homePage.searchPhotoElement.clear();
-	    homePage.searchPhotoElement.sendKeys("animals");
+	    homePage.searchPhotoElement.sendKeys("football");
 	}
 
 	@Then("^only photos with that tag name will appear$")
 	public void only_photos_with_that_tag_name_will_appear() throws Throwable {
 		Thread.sleep(200);
-		assertEquals("#animals", homePage.firstTag.getText());
+		assertEquals("#football", homePage.firstTag.getText());
 	}
 
 	@When("^user types in image name$")
